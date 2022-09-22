@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Nelitaa/Portfolio#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "hint": "^7.1.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
