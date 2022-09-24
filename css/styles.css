@@ -133,17 +133,17 @@ p {
 }
 
 .boxblue {
-  background-color:#1A2236;
+  background-color: #1a2236;
 }
 
 h2 {
   color: #fff;
   font-family: 'Poppins', monospace;
-  font-style:normal;
+  font-style: normal;
   font-weight: 20;
   font-size: 20px;
   line-height: 80%;
-  margin:20px;
+  margin: 20px;
 }
 
 h3 {
@@ -153,7 +153,6 @@ h3 {
   font-weight: 800;
   font-size: 20px;
   line-height: 30px;
-  
 }
 
 .lenguages {
@@ -170,7 +169,7 @@ h3 {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0;
-  color: #000000;
+  color: #000;
   font-family: 'Poppins', monospace;
   font-style: normal;
   font-weight: 300;
@@ -199,7 +198,7 @@ h3 {
 }
 
 .button2:hover {
-  background:  #1a2236;
+  background: #1a2236;
   color: #fff;
   border: 1px solid #fff;
 }
@@ -230,9 +229,9 @@ h3 {
   margin: 20px;
   height: 260px;
   width: 260px;
-  background-color: #1C528A;
+  background-color: #1c528a;
   color: #fff;
-  font-family: 'Poppins';
+  font-family: 'Poppins', monospace;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -242,7 +241,7 @@ h3 {
   background-position: 100% 100%;
 }
 
-.frameworks-myself{
+.frameworks-myself {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,9 +249,9 @@ h3 {
   margin: 20px;
   height: 260px;
   width: 260px;
-  background-color: #E2505C;
+  background-color: #e2505c;
   color: #fff;
-  font-family: 'Poppins';
+  font-family: 'Poppins', monospace;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -263,7 +262,7 @@ h3 {
   background-size: 30%;
 }
 
-.skills-myself{
+.skills-myself {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,9 +270,9 @@ h3 {
   margin: 20px;
   height: 260px;
   width: 260px;
-  background-color: #FEBF52;
+  background-color: #febf52;
   color: #fff;
-  font-family: 'Poppins';
+  font-family: 'Poppins', monospace;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
