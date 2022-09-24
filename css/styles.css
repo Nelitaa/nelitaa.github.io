@@ -91,6 +91,12 @@ p {
   margin-top: 5px;
 }
 
+.button-works {
+  display: flex;
+  height: 80px;
+  margin: 10px;
+}
+
 .button1 {
   display: flex;
   flex-direction: row;
@@ -133,22 +139,26 @@ p {
 }
 
 .boxblue {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
   background-color: #1a2236;
+
 }
 
 h2 {
   color: #fff;
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 20;
-  font-size: 20px;
-  line-height: 80%;
+  font-weight: 380;
+  font-size: 28px;
+  line-height: 16px;
   margin: 20px;
 }
 
 h3 {
   color: #fff;
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -158,55 +168,57 @@ h3 {
 .lenguages {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 50px;
-  justify-content: flex-start;
+  column-gap: 20px;
+  justify-content: left;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
 }
 
 .boxlenguages {
   list-style-type: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
   margin: 0;
   color: #000;
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 300;
-  font-size: 10.3334px;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 80%;
   background-color: #98dede;
+  align-self: center;
 }
 
 .button2 {
   display: flex;
   flex-direction: row;
   align-self: center;
-  justify-content: center;
-  background: #fff;
-  font-family: 'Poppins', monospace;
+  justify-content: left;
+  background: #1a2236;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 24px;
-  color: #1a2236;
-  width: 288px;
-  height: 50px;
+  color: #fff;
+  width: 220px;
+  height: 60px;
   align-items: center;
+  margin: 10px;
+  border: 2px solid #fff;
   cursor: pointer;
-  margin-top: 10px;
+  padding: 15px;
 }
 
 .button2:hover {
-  background: #1a2236;
-  color: #fff;
-  border: 1px solid #fff;
+  background: #fff;
+  color: #1a2236;
+  border: 1px solid #1a2236;
 }
 
 .button2:focus {
-  background: #1a2236;
-  color: #fff;
-  border: 2px solid #fff;
+  background: #fff;
+  color: #1a2236;
+  border: 2px solid #1a2236;
 }
 
 .blocks {
