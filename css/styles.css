@@ -36,11 +36,12 @@ main {
   justify-content: center;
 }
 
-section.content1 {
+.content1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  margin-top: 45px;
   padding-bottom: 0;
 }
 
@@ -69,7 +70,7 @@ h1 {
   font-weight: 400;
   font-size: 50px;
   line-height: 100%;
-  margin-top: 55px;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
@@ -83,14 +84,14 @@ p {
   color: #1a2236;
 }
 
-.button1 {
+.button {
   display: flex;
   flex-direction: column;
   height: 80px;
   margin-top: 5px;
 }
 
-button {
+.button1 {
   display: flex;
   flex-direction: row;
   align-self: center;
@@ -108,14 +109,177 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button1:hover {
   background: #fff;
   color: #1a2236;
   border: 1px solid #1a2236;
 }
 
-button:focus {
+.button1:focus {
   background: #fff;
   color: #1a2236;
   border: 2px solid #1a2236;
+}
+
+.works {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+.work1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.boxblue {
+  background-color:#1A2236;
+}
+
+h2 {
+  color: #fff;
+  font-family: 'Poppins', monospace;
+  font-style:normal;
+  font-weight: 20;
+  font-size: 20px;
+  line-height: 80%;
+  margin:20px;
+}
+
+h3 {
+  color: #fff;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  
+}
+
+.lenguages {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 50px;
+  justify-content: flex-start;
+}
+
+.boxlenguages {
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  color: #000000;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.3334px;
+  line-height: 80%;
+  background-color: #98dede;
+}
+
+.button2 {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  background: #fff;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a2236;
+  width: 288px;
+  height: 50px;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button2:hover {
+  background:  #1a2236;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.button2:focus {
+  background: #1a2236;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.blocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  margin-left: 30px;
+  height: 80px;
+}
+
+.lenguages-myself {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px;
+  height: 260px;
+  width: 260px;
+  background-color: #1C528A;
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  background-image: url(https://drive.google.com/uc?export=download&id=1xvBazyC_e7ZDtx2bOGDLmsvI3fieGZTR);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.frameworks-myself{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px;
+  height: 260px;
+  width: 260px;
+  background-color: #E2505C;
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  background-image: url(https://drive.google.com/uc?export=download&id=1Ln6EH7S_ZZgSLulIVCqUPfs0fJN8kaLx);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 30%;
+}
+
+.skills-myself{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px;
+  height: 260px;
+  width: 260px;
+  background-color: #FEBF52;
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  background-image: url(https://drive.google.com/uc?export=download&id=1hOM0oq0FGkrryYMdWJ0k04cCfzFZxfIC);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 35%;
 }
