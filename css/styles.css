@@ -293,3 +293,134 @@ h3 {
   background-position: 100% 100%;
   background-size: 35%;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9fa;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 18px 0 18px;
+}
+
+.contact-form-title {
+  margin: 32px 53px 0 18px;
+  font-family: 'Playfair Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+  color: #1a2236;
+}
+
+.description {
+  margin: 20px 14px 0 18px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #1a2236;
+}
+
+input[type="text"],
+input[type="email"] {
+  box-sizing: border-box;
+  height: 52px;
+  background: #fff;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding-left: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #7d7c84;
+}
+
+.contact-form-message {
+  box-sizing: border-box;
+  padding-left: 16px;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7d7c84;
+}
+
+.contact-button {
+  margin-top: 20px;
+  margin-bottom: 64px;
+  background: #1a2236;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  height: 50px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact-form-img {
+  margin: 0;
+}
+
+.contact-button:hover {
+  background: #fff;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.contact-button:focus {
+  background: #fff;
+  color: #1a2236;
+  border: 2px solid #1a2236;
+}
+
+.footer-download {
+  height: 24px;
+  margin-left: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #92dcdc;
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background: #1a2236;
+  height: 180px;
+}
+
+.image-footer {
+  height: 20px;
+  padding-left: 10px;
+}
+
+.icons-section {
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px 40px;
+}
+
+.icons {
+  height: 20px;
+  margin-left: 35px;
+}
