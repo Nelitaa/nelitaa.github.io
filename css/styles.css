@@ -392,7 +392,6 @@ input[type="email"] {
 
 .footer-download {
   height: 24px;
-  margin-left: 16px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -416,11 +415,11 @@ footer {
 }
 
 .icons-section {
-  display: grid;
-  grid-template-columns: 40px 40px 40px 40px 40px 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18px 0 18px;
 }
 
 .icons {
   height: 20px;
-  margin-left: 35px;
 }
