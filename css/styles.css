@@ -27,9 +27,14 @@ header {
   display: none;
 }
 
-main {
+main.main-presentation {
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
+  background-image: url(https://drive.google.com/uc?export=download&id=1XupJ_UCzxSKQsUBwjQA3x7wICdzCN6DP);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: bottom;
 }
 
 .presentation {
@@ -38,26 +43,14 @@ main {
   justify-content: center;
   padding: 40px;
   margin-top: 25px;
-  width: 50%;
-}
-
-.wrapper-image {
-  width: 50%;
-  height: auto;
-}
-
-.background-presentation {
-  background-image: url('../assets/img/image1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   html {
     background: none;
   }
-  
+
   header {
     box-shadow: 0px 0.5px 0px #dddfe6;
   }
@@ -109,15 +102,27 @@ main {
   }
 
   .presentation {
-    margin-top: 100px;
-    margin-left: 45px;
+    margin-top: 140px;
+    width: 40%;
+    padding: 0;
   }
 
   main.main-presentation {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: auto;
+    background-image: url('../assets/img/image1.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 50%;
+    margin-left: 80px;
+  }
+
+  h1 {
+    font-size: 110px;
+    text-shadow: 2px 0 0 #1a2236;
+  }
+
+  p {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
