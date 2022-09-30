@@ -159,7 +159,7 @@ main.main-presentation {
     line-height: 24px;
     color: #92dcdc;
     margin: 0;
-    margin-left: 15% !important; 
+    margin-left: 15% !important;
   }
   
   .image-footer-desktop {
@@ -287,7 +287,6 @@ main.main-presentation {
     background-repeat: no-repeat;
     background-position: 100% 100%;
   }
-
 }
 
 h1 {
