@@ -190,7 +190,6 @@ h2 {
   margin: 0;
 }
 
-
 .boxlenguages {
   list-style-type: none;
   color: #000;
@@ -220,7 +219,7 @@ h2 {
   margin-top: 7%;
   width: 60%;
   border: 1px solid #fff;
-  font-size: 110%;  
+  font-size: 110%;
 }
 
 .button-see-this-project-1 {
@@ -238,7 +237,7 @@ h2 {
   margin-top: 7%;
   width: 60%;
   border: 1px solid #fff;
-  font-size: 110%;  
+  font-size: 110%;
 }
 
 .projects-image {
@@ -812,7 +811,7 @@ section.footer-link {
     display: none;
     height: 0 !important;
   }
-  
+
   div.background-1 {
     grid-area: 7/1/8/3;
     background-image: url(https://drive.google.com/uc?export=download&id=1IiJnqvMHJeN9L0Q3Gy_R8lBnIZXysOuV);
@@ -826,7 +825,6 @@ section.footer-link {
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: auto;
-
   }
 
   div.background-3 {
@@ -891,7 +889,7 @@ section.footer-link {
     display: flex;
     flex-direction: column;
   }
-  
+
   .projects-image-6 {
     display: flex;
     flex-direction: column;
@@ -921,6 +919,4 @@ section.footer-link {
     display: flex;
     flex-direction: column;
   }
-
 }
-
