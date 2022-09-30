@@ -89,6 +89,7 @@ p.presentation-p {
   align-items: center;
   cursor: pointer;
   padding: 5%;
+  transition: all 0.5s ease-out;
 }
 
 .button-start-collaboration:hover {
@@ -202,6 +203,13 @@ h2 {
   padding: 2%;
   margin-right: 2%;
   font-size: 80%;
+  transition: all 0.5s ease-out;
+}
+
+.boxlenguages:hover,
+.boxlenguages:focus {
+  background-color: #fff;
+  transition: all 0.5s ease-out;
 }
 
 .button-see-this-project {
@@ -220,6 +228,7 @@ h2 {
   width: 60%;
   border: 1px solid #fff;
   font-size: 110%;
+  transition: all 0.5s ease-out;
 }
 
 .button-see-this-project-1 {
@@ -238,6 +247,7 @@ h2 {
   width: 60%;
   border: 1px solid #fff;
   font-size: 110%;
+  transition: all 0.5s ease-out;
 }
 
 .projects-image {
@@ -286,6 +296,18 @@ h2 {
   border: 2px solid #fff;
 }
 
+.button-see-this-project-1:hover {
+  background: #1a2236;
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+.button-see-this-project-1:focus {
+  background: #fff;
+  color: #1a2236;
+  border: 3px solid #fff;
+}
+
 main.about-myself-main {
   display: flex;
   flex-direction: column;
@@ -302,6 +324,7 @@ main.about-myself-main {
   cursor: pointer;
   padding: 5%;
   font-size: 100%;
+  transition: all 0.5s ease-out;
 }
 
 .button-get-my-cv:hover {
@@ -538,6 +561,7 @@ section.footer-link {
   ul.nav-pages {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr 3fr;
+    justify-content: center;
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -546,27 +570,65 @@ section.footer-link {
     line-height: 24px;
     text-align: center;
     color: #1a2236;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
   }
 
   li.nav-pages-hello {
     grid-column-start: 2;
     grid-column-end: 3;
+    padding: 14%;
+    transition: all 0.5s ease-out;
+  }
+
+  li.nav-pages-hello:hover,
+  li.nav-pages-hello:focus {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid;
   }
 
   li.nav-pages-portofilo {
     grid-column-start: 3;
     grid-column-end: 4;
+    padding: 14%;
+    transition: all 0.5s ease-out;
+  }
+
+  li.nav-pages-portofilo:hover,
+  li.nav-pages-portofilo:focus {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid;
   }
 
   li.nav-pages-about {
     grid-column-start: 4;
     grid-column-end: 5;
+    padding: 14%;
+    transition: all 0.5s ease-out;
+  }
+
+  li.nav-pages-about:hover,
+  li.nav-pages-about:focus {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid;
   }
 
   li.nav-pages-contact {
     grid-column-start: 5;
     grid-column-end: 6;
+    padding: 14%;
+    transition: all 0.5s ease-out;
+  }
+
+  li.nav-pages-contact:hover,
+  li.nav-pages-contact:focus {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid;
   }
 
   main.main-presentation {
@@ -885,6 +947,22 @@ section.footer-link {
     width: 70%;
   }
 
+  .input-hover:hover {
+    animation: nelah;
+    animation-duration: 1s;
+  }
+
+  @keyframes nelah {
+    50% {
+      transform: scaleX(1.2);
+    }
+
+    to {
+      transform: scaleX(1);
+      border: 3px solid #1a2236;
+    }
+  }
+
   .projects-image-5 {
     display: flex;
     flex-direction: column;
@@ -913,6 +991,7 @@ section.footer-link {
   .button-see-this-project-1 {
     padding-top: 3% !important;
     margin-top: 3% !important;
+    transition: all 0.5s ease-out;
   }
 
   .image-project11 {
