@@ -124,10 +124,10 @@ main.main-presentation {
     background-position: 100% 100%;
     height: 12vw;
   }
-  
+
   h1 {
     text-shadow: 2px 0 0 #1a2236;
-    font-size: 550% !important;
+    font-size: 490% !important;
   }
 
   p.presentation-p {
@@ -151,7 +151,7 @@ main.main-presentation {
     margin-left: 0 !important;
     width: 70%;
   }
-  
+
   .resume-desktop {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -161,7 +161,7 @@ main.main-presentation {
     margin: 0;
     margin-left: 15% !important;
   }
-  
+
   .image-footer-desktop {
     margin-left: 50%;
     height: auto;
@@ -189,7 +189,7 @@ main.main-presentation {
   }
 
   section.contact-form {
-    width: 40%;
+    width: 47%;
     margin-bottom: 5%;
   }
 
@@ -200,15 +200,16 @@ main.main-presentation {
     background-repeat: no-repeat;
     background-position: 0% 0%;
     padding-right: 8%;
+    background-size: contain;
   }
 
   section.contact-background-right {
     display: flex;
-    width: 20%;
+    width: 33%;
     background-image: url(https://drive.google.com/uc?export=download&id=1_dW8Mn8gtm1fqw0q0vFzxQsyrNnhWGMR);
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    padding-left: 10%;
+    background-size: contain;
   }
 
   input[type="text"] {
@@ -217,7 +218,7 @@ main.main-presentation {
   }
 
   input[type="email"] {
-    height: 80% !important; 
+    height: 80% !important;
     grid-area: 1/2/2/3;
   }
 
@@ -262,6 +263,8 @@ main.main-presentation {
     width: auto;
     grid-area: 1/1/1/1;
     margin: 0;
+    background-size: 30%;
+    padding: 0;
   }
 
   div.frameworks-myself {
@@ -269,6 +272,8 @@ main.main-presentation {
     width: auto;
     grid-area: 1/2/1/3;
     margin: 0;
+    background-size: 25%;
+    padding: 0;
   }
 
   div.skills-myself {
@@ -276,6 +281,8 @@ main.main-presentation {
     width: auto;
     grid-area: 2/1/3/2;
     margin: 0;
+    background-size: 35%;
+    padding: 0;
   }
 
   div.background-myself {
@@ -286,6 +293,15 @@ main.main-presentation {
     background-image: url(https://drive.google.com/uc?export=download&id=1Gyn_RExJ_M6yD-sBAheQGj8GnzC-4cL5);
     background-repeat: no-repeat;
     background-position: 100% 100%;
+    background-size: 80%;
+  }
+
+  h3 {
+    font-size: 100% !important;
+  }
+  
+  .word-lenguages {
+    font-size: 80% !important;
   }
 }
 
@@ -468,7 +484,7 @@ section.blocks {
 .lenguages-myself {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   background-color: #1c528a;
   color: #fff;
   font-family: 'Poppins', monospace;
@@ -486,7 +502,7 @@ section.blocks {
 .frameworks-myself {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   background-color: #e2505c;
   color: #fff;
   font-family: 'Poppins', monospace;
@@ -505,7 +521,7 @@ section.blocks {
 .skills-myself {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   padding: 10%;
   margin: 6%;
   background-color: #febf52;
