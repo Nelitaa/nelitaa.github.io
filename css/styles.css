@@ -884,7 +884,27 @@ section.footer-link {
     justify-content: left;
     width: 70%;
   }
+  /******************************************/
+  .input-hover:hover {
+    animation: nelah;
+    animation-duration: 1s;
+  }
 
+  @keyframes nelah {
+    from {
+
+    }
+
+    50% {
+      transform: scaleX(1.2);
+    }
+
+    to {
+      transform: scaleX(1);
+      border: 3px solid #1a2236;
+    }
+  }
+  /*******************************************/
   .projects-image-5 {
     display: flex;
     flex-direction: column;
