@@ -174,9 +174,12 @@
             <h2>Get started</h2>
             <p class="presentation-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus officiis dicta nulla molestias vero delectus accusantium corporis ullam quas, accusamus quisquam ut earum illo maxime a ratione consequatur? Fugit, quaerat!</p>
             <form action="https://formspree.io/f/maykozqg" method="post" class="form">
-                <input type="text" class="input-hover" name="name" placeholder="Your name" maxlength="30" required/>
-                <input type="email" class="input-hover" name="email" placeholder="Your email" required/>
-                <textarea class="contact-form-message input-hover" name="message" placeholder="Enter your message here.." id="" cols="30" rows="10" maxlength="500" required></textarea>
+                <label for="name" hidden>Name</label>
+                <input type="text" id="name" class="input-hover" name="name" placeholder="Your name" maxlength="30" required/>
+                <label for="email" hidden>Email</label>
+                <input type="email" id="email" class="input-hover" name="email" placeholder="Your email" required/>
+                <label for="message" hidden>Message</label>
+                <textarea id="message" class="contact-form-message input-hover" name="message" placeholder="Enter your message here.." id="" cols="30" rows="10" maxlength="500" required></textarea>
                 <div class="contact-button">
                     <button class="button-start-collaboration" type="submit">Start collaboration</button>
                 </div>
