@@ -9,6 +9,18 @@ body {
   margin: 0;
 }
 
+li > a {
+  text-decoration: none;
+  color: #1a2236;
+  padding: 14%;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+
+li > a:hover {
+  color: #fff;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -582,6 +594,9 @@ section.footer-link {
     grid-column-end: 3;
     padding: 14%;
     transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li.nav-pages-hello:hover,
@@ -596,6 +611,9 @@ section.footer-link {
     grid-column-end: 4;
     padding: 14%;
     transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li.nav-pages-portofilo:hover,
@@ -610,6 +628,9 @@ section.footer-link {
     grid-column-end: 5;
     padding: 14%;
     transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li.nav-pages-about:hover,
@@ -617,6 +638,9 @@ section.footer-link {
     background-color: #1a2236;
     color: #fff;
     border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li.nav-pages-contact {
@@ -624,6 +648,9 @@ section.footer-link {
     grid-column-end: 6;
     padding: 14%;
     transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   li.nav-pages-contact:hover,
