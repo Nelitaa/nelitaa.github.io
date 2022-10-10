@@ -3,7 +3,7 @@ const popUp = document.querySelector('.navigation');
 const xButton = document.querySelector('.xbutt');
 const scrollb = document.querySelector('body');
 const links = document.querySelector('.nav-pages-pop');
-const navX = document.querySelector('.nav-icon-pop')
+const navX = document.querySelector('.nav-icon-pop');
 
 menu.addEventListener('click', () => {
   menu.classList.toggle('active');
@@ -31,4 +31,4 @@ document.querySelector('.xbutt').addEventListener('click', () => {
   xButton.classList.remove('active');
   links.classList.remove('active');
   navX.classList.toggle('active');
-  })
+});
