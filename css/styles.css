@@ -34,8 +34,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 0%;
-  height: 85vh;
+  height: 100vh;
   left:-100%;
+  width: 100%;
 }
 
 .navigation.active {
@@ -46,14 +47,27 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 .nav-icon-pop.active {
   left: 0;
 }
 
+.xbutt {
+  cursor: pointer;
+  left: -100%;
+}
+
+.xbutt.active {
+  left: 0;
+  float: right;
+}
+
 .nav-pages-pop.active {
   left: 0;
+  position: relative;
 }
 
 .nav-icon {
@@ -61,6 +75,12 @@ header {
   justify-content: flex-end;
   height: auto;
   padding: 4%;
+  cursor: pointer;
+}
+
+.nav-icon.active {
+  position: absolute;
+  left: -100%;
 }
 
 .nav-pages {
