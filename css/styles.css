@@ -28,6 +28,34 @@ header {
   height: auto;
 }
 
+.navigation {
+  position: absolute;
+  background-image: url(https://drive.google.com/uc?export=download&id=1c8Q_qN301ZzOIUnUgAAUfxr_ECSFU2fe);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
+  height: 85vh;
+  left:-100%;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.nav-icon-pop {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.nav-icon-pop.active {
+  left: 0;
+}
+
+.nav-pages-pop.active {
+  left: 0;
+}
+
 .nav-icon {
   display: flex;
   justify-content: flex-end;
@@ -37,6 +65,24 @@ header {
 
 .nav-pages {
   display: none;
+}
+
+ul.nav-pages-pop {
+  position: absolute;
+  row-gap: 10%;
+  align-self: center;
+  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 48px;
+  text-align: center;
+  color: #1a2236;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  padding: 0;
+  left: -100%;
 }
 
 main.main-presentation {
@@ -587,6 +633,10 @@ section.footer-link {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  ul.nav-pages-pop {
+    display: none;
   }
 
   li.nav-pages-hello {
