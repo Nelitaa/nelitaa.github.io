@@ -22,3 +22,13 @@ document.querySelectorAll('.nav-pages-pop').forEach((i) => i.addEventListener('c
   links.classList.remove('active');
   navX.classList.toggle('active');
 }));
+
+document.querySelector('.xbutt').addEventListener('click', () => {
+  xButton.classList.remove('active');
+  menu.classList.remove('active');
+  popUp.classList.remove('active');
+  scrollb.classList.remove('active');
+  xButton.classList.remove('active');
+  links.classList.remove('active');
+  navX.classList.toggle('active');
+  })

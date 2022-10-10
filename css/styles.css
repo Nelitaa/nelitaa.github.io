@@ -12,7 +12,7 @@ body {
 li > a {
   text-decoration: none;
   color: #1a2236;
-  padding: 14%;
+  margin-top: 14%;
   width: 100%;
   transition: all 0.5s ease-out;
 }
@@ -63,6 +63,7 @@ header {
 .xbutt.active {
   left: 0;
   float: right;
+  cursor: pointer;
 }
 
 .nav-pages-pop.active {
@@ -80,7 +81,6 @@ header {
 
 .nav-icon.active {
   position: absolute;
-  left: -100%;
 }
 
 .nav-pages {
