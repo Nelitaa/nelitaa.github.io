@@ -136,3 +136,12 @@ function createProject(project) {
 }
 
 createProject(projects[0]);
+/*
+
+const projectsPOPUPBUTTON = document.querySelector('.button-see-this-project-1');
+const projectsPOPUP = document.querySelector(createProject(projects[0]));
+
+projectsPOPUPBUTTON.addEventListener ('click', () => {
+  projectsPOPUPBUTTON.classList.toggle('active');
+  projectsPOPUP.classList.toggle('active');
+})*/
