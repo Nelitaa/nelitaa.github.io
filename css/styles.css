@@ -1103,4 +1103,112 @@ section.footer-link {
     display: flex;
     flex-direction: column;
   }
+
+  .projects-popup-paragraph {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+  }
+
+  .projects-popup-button-container {
+    padding-left: 16%;
+  }
+
+  .projects-popup-button {
+    text-align: left !important;
+    padding-left: 2% !important;
+  }
 }
+
+.projects-popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+
+.projects-popup-title {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 80%;
+  color: #1A2236;
+}
+
+.projects-popup-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1A2236;
+}
+
+.projects-popup-button {
+  position: relative;
+  align-self: center;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #1a2236;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #1a2236;
+  width: 246px;
+  height: 51px;
+  margin: 5%;
+  transition: all 0.5s ease-out;
+}
+
+.projects-popup-button:hover {
+  background: #1a2236;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.projects-popup-button:focus {
+  background: #fff;
+  color: #1a2236;
+  border: 2px solid #fff;
+}
+
+.projects-popup-button-icon {
+  position: absolute;
+  right: 7%;
+}
+
+#lenguagesPopup {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0%;
+}
+
+.boxlenguages-pop {
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #1a2236;
+  color: #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 80%;
+  background-color: #fff;
+  padding: 1.5%;
+  margin-right: 3%;
+}
+
+.projects-popup-img-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects-popup-img {
+  width: 100%;
+}
+
