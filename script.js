@@ -1,5 +1,5 @@
 let projects = [
-  { name: 'Project 1 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 1 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1HXlJfB-0riqWY9-I0zuQHusZCi2KxYa_', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
   { name: 'Project 2 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=13ayEXXW-B43VX-TAXmpqdcKM0ElcgvUX', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
   { name: 'Project 3 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1BGe71kPBmeKQ9YSNCfPwRLgYSCdeIJdo', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
   { name: 'Project 4 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1TndTLN0JFv6vbAgfiYqASfGdnZh23x5K', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
@@ -61,14 +61,14 @@ for (let i = 0; i < projects.length; i++) {
 
   if (i === 0) {
     let imgProject1 = document.createElement('img');
-    imgProject1.className = 'image-project1';
-    imgProject1.src = 'https://drive.google.com/uc?export=download&id=1HXlJfB-0riqWY9-I0zuQHusZCi2KxYa_';
+    imgProject1.className = 'image-project11';
+    imgProject1.src = 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-';
     divProjectImage.appendChild(imgProject1);
   }
 
   let imgProject = document.createElement('img');
   if (i === 0) {
-    imgProject.className = 'image-project11';
+    imgProject.className = 'image-project1';
   }
   imgProject.src = projects[i].image;
   divProjectImage.appendChild(imgProject);
@@ -137,7 +137,24 @@ for (let i = 0; i < projects.length; i++) {
   let buttonSeeThisProject = document.createElement('button');
   buttonSeeThisProject.type = 'submit';
   buttonSeeThisProject.textContent = 'See this project';
-  buttonSeeThisProject.className = 'button-see-this-project-1';
+  if (i===0){
+    buttonSeeThisProject.className = 'button-see-this-project-1';
+  }
+  if (i===1){
+    buttonSeeThisProject.className = 'button-see-this-project-2';
+  }
+  if (i===2){
+    buttonSeeThisProject.className = 'button-see-this-project-3';
+  }
+  if (i===3){
+    buttonSeeThisProject.className = 'button-see-this-project-4';
+  }
+  if (i===4){
+    buttonSeeThisProject.className = 'button-see-this-project-5';
+  }
+  if (i===5){
+    buttonSeeThisProject.className = 'button-see-this-project-6';
+  }
   sectionBoxBlue.appendChild(buttonSeeThisProject);
 
   let iconButtonSeeThisProject = document.createElement('img');
@@ -201,20 +218,102 @@ document.querySelector('.xbutt').addEventListener('click', () => {
   navX.classList.toggle('active');
 })
 
-let open = document.querySelector('.button-see-this-project-1');
-open.addEventListener('click', () => {
-  let div = document.createElement('div');
-  div.id = 'projects-popup';
-  div.className = 'projects-popup-container';
-  document.body.append(div);
-  document.body.classList.add('stop-scroll');
-  createProject(projects[0]);
-  let close = document.querySelector('.projects-popup-divXButton');
-  close.addEventListener('click', () => {
-    document.body.classList.remove('stop-scroll');
-    document.body.removeChild(div);
-  });
-});
+for(let i=0; i<projects.length; i++){
+  if(i===0){
+    let open = document.querySelector('.button-see-this-project-1');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      document.body.classList.add('stop-scroll');
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
+        document.body.removeChild(div);
+      });
+    });
+  }
+  if(i===1){
+    let open = document.querySelector('.button-see-this-project-2');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      document.body.classList.add('stop-scroll');
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
+        document.body.removeChild(div);
+      });
+    });
+  }
+  if(i===2){
+    let open = document.querySelector('.button-see-this-project-3');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      document.body.classList.add('stop-scroll');
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
+        document.body.removeChild(div);
+      });
+    });
+  }
+  if(i===3){
+    let open = document.querySelector('.button-see-this-project-4');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      document.body.classList.add('stop-scroll');
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
+        document.body.removeChild(div);
+      });
+    });
+  }
+  if(i===4){
+    let open = document.querySelector('.button-see-this-project-5');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      document.body.classList.add('stop-scroll');
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
+        document.body.removeChild(div);
+      });
+    });
+  }
+  if(i===5){
+    let open = document.querySelector('.button-see-this-project-6');
+    open.addEventListener('click', () => {
+      let div = document.createElement('div');
+      div.id = 'projects-popup';
+      div.className = 'projects-popup-container';
+      document.body.append(div);
+      createProject(projects[i]);
+      let close = document.querySelector('.projects-popup-divXButton');
+      close.addEventListener('click', () => {
+        document.body.removeChild(div);
+      });
+    });
+  }
+}
 
 function createProject(project) {
   let divXButton = document.createElement('div');

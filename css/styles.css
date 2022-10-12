@@ -309,7 +309,12 @@ h3 {
   transition: all 0.5s ease-out;
 }
 
-.button-see-this-project-1 {
+.button-see-this-project-1,
+.button-see-this-project-2,
+.button-see-this-project-3,
+.button-see-this-project-4,
+.button-see-this-project-5,
+.button-see-this-project-6 {
   display: flex;
   align-self: flex-start;
   background: #1a2236;
@@ -322,10 +327,11 @@ h3 {
   padding: 2%;
   margin-left: 4%;
   margin-top: 7%;
-  width: 60%;
+  width: 210px;
   border: 1px solid #fff;
   font-size: 110%;
   transition: all 0.5s ease-out;
+  position: relative;
 }
 
 .projects-image {
@@ -374,13 +380,23 @@ h3 {
   border: 2px solid #fff;
 }
 
-.button-see-this-project-1:hover {
+.button-see-this-project-1:hover,
+.button-see-this-project-2:hover,
+.button-see-this-project-3:hover,
+.button-see-this-project-4:hover,
+.button-see-this-project-5:hover,
+.button-see-this-project-6:hover {
   background: #1a2236;
   color: #fff;
   border: 3px solid #fff;
 }
 
-.button-see-this-project-1:focus {
+.button-see-this-project-1:focus,
+.button-see-this-project-2:focus,
+.button-see-this-project-3:focus,
+.button-see-this-project-4:focus,
+.button-see-this-project-5:focus,
+.button-see-this-project-6:focus {
   background: #fff;
   color: #1a2236;
   border: 3px solid #fff;
@@ -1093,7 +1109,12 @@ section.footer-link {
     margin-top: 0 !important;
   }
 
-  .button-see-this-project-1 {
+  .button-see-this-project-1,
+  .button-see-this-project-2,
+  .button-see-this-project-3,
+  .button-see-this-project-4,
+  .button-see-this-project-5,
+  .button-see-this-project-6 {
     padding-top: 3% !important;
     margin-top: 3% !important;
     transition: all 0.5s ease-out;
@@ -1219,15 +1240,10 @@ section.footer-link {
 }
 
 #projects-popup {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   background-color: #fff;
-}
-
-.stop-scroll {
-  height: 100%;
-  overflow: hidden;
 }
 
 .projects-button-icon {
