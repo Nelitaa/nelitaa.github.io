@@ -31,12 +31,7 @@ document.querySelector('.xbutt').addEventListener('click', () => {
   xButton.classList.remove('active');
   links.classList.remove('active');
   navX.classList.toggle('active');
-});
-
-let div = document.createElement('div');
-div.id = 'projects-popup';
-div.className = 'projects-popup-container';
-document.body.appendChild(div);
+})
 
 let projects = [
   {name: 'Project 1 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
@@ -47,15 +42,40 @@ let projects = [
   {name: 'Project 6 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
 ];
 
+let open = document.querySelector('.button-see-this-project-1');
+open.addEventListener('click', () => {
+  let div = document.createElement('div');
+  div.id = 'projects-popup';
+  div.className = 'projects-popup-container';
+  document.body.append(div);
+  document.body.classList.add('stop-scroll');
+  createProject(projects[0]);
+  let close = document.querySelector('.projects-popup-divXButton');
+  close.addEventListener('click', () => {
+    document.body.classList.remove('stop-scroll');
+    document.body.removeChild(div);
+  });
+});
+
 function createProject(project) {
+  let divXButton = document.createElement('div');
+  divXButton.id = 'projects-popup-divXButton';
+  divXButton.className = 'projects-popup-divXButton-container';
+  document.getElementById('projects-popup').appendChild(divXButton);
+
+  let xButton = document.createElement('img');
+  xButton.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
+  xButton.className = 'projects-popup-divXButton';
+  divXButton.appendChild(xButton);
+
   let h2 = document.createElement('h2');
   h2.textContent = project.name;
   h2.className = 'projects-popup-title';
-  div.appendChild(h2);
+  document.getElementById('projects-popup').appendChild(h2);
 
   let ul = document.createElement('ul');
   ul.id = 'lenguagesPopup';
-  div.appendChild(ul);
+  document.getElementById('projects-popup').appendChild(ul);
 
   let li = document.createElement('li');
   li.textContent = project.technologies[0];
@@ -72,15 +92,15 @@ function createProject(project) {
   listhird.className = 'boxlenguages-pop';
   ul.appendChild(listhird);
 
-   let img1 = document.createElement('img');
+  let img1 = document.createElement('img');
   img1.src = project.image;
   img1.className = 'projects-popup-img1';
-  div.appendChild(img1);
+  document.getElementById('projects-popup').appendChild(img1);
 
   let divImg = document.createElement('div');
   divImg.id = 'projects-popup-img';
   divImg.className = 'projects-popup-img-container';
-  div.appendChild(divImg);
+  document.getElementById('projects-popup').appendChild(divImg);
 
   let img2 = document.createElement('img');
   img2.src = project.imageSecundary;
@@ -105,12 +125,12 @@ function createProject(project) {
   let p = document.createElement('p');
   p.textContent = project.description;
   p.className = 'projects-popup-paragraph';
-  div.appendChild(p);
+  document.getElementById('projects-popup').appendChild(p);
 
   let divButton = document.createElement('div');
   divButton .id = 'projects-popup-button';
   divButton .className = 'projects-popup-button-container';
-  div.appendChild(divButton);
+  document.getElementById('projects-popup').appendChild(divButton);
 
   let buttonDemo = document.createElement('button');
   buttonDemo.type = 'submit';
@@ -133,15 +153,4 @@ function createProject(project) {
   iconButtonSource.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
   iconButtonSource.className = 'projects-popup-button-icon';
   buttonSource.appendChild(iconButtonSource);
-}
-
-createProject(projects[0]);
-/*
-
-const projectsPOPUPBUTTON = document.querySelector('.button-see-this-project-1');
-const projectsPOPUP = document.querySelector(createProject(projects[0]));
-
-projectsPOPUPBUTTON.addEventListener ('click', () => {
-  projectsPOPUPBUTTON.classList.toggle('active');
-  projectsPOPUP.classList.toggle('active');
-})*/
+};

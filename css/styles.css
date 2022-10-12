@@ -1213,3 +1213,20 @@ section.footer-link {
   width: 100%;
 }
 
+.projects-popup-divXButton-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+#projects-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.stop-scroll{
+  height: 100%;
+  overflow: hidden;
+}
