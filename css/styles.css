@@ -309,7 +309,12 @@ h3 {
   transition: all 0.5s ease-out;
 }
 
-.button-see-this-project-1 {
+.button-see-this-project-1,
+.button-see-this-project-2,
+.button-see-this-project-3,
+.button-see-this-project-4,
+.button-see-this-project-5,
+.button-see-this-project-6 {
   display: flex;
   align-self: flex-start;
   background: #1a2236;
@@ -322,10 +327,11 @@ h3 {
   padding: 2%;
   margin-left: 4%;
   margin-top: 7%;
-  width: 60%;
+  width: 210px;
   border: 1px solid #fff;
   font-size: 110%;
   transition: all 0.5s ease-out;
+  position: relative;
 }
 
 .projects-image {
@@ -374,13 +380,23 @@ h3 {
   border: 2px solid #fff;
 }
 
-.button-see-this-project-1:hover {
+.button-see-this-project-1:hover,
+.button-see-this-project-2:hover,
+.button-see-this-project-3:hover,
+.button-see-this-project-4:hover,
+.button-see-this-project-5:hover,
+.button-see-this-project-6:hover {
   background: #1a2236;
   color: #fff;
   border: 3px solid #fff;
 }
 
-.button-see-this-project-1:focus {
+.button-see-this-project-1:focus,
+.button-see-this-project-2:focus,
+.button-see-this-project-3:focus,
+.button-see-this-project-4:focus,
+.button-see-this-project-5:focus,
+.button-see-this-project-6:focus {
   background: #fff;
   color: #1a2236;
   border: 3px solid #fff;
@@ -532,8 +548,8 @@ form.form {
   justify-content: center;
 }
 
-input[type="text"],
-input[type="email"] {
+input[type='text'],
+input[type='email'] {
   box-sizing: border-box;
   height: 13vw;
   background: #fff;
@@ -849,12 +865,12 @@ section.footer-link {
     background-size: contain;
   }
 
-  input[type="text"] {
+  input[type='text'] {
     height: 80% !important;
     grid-area: 1/1/2/2;
   }
 
-  input[type="email"] {
+  input[type='email'] {
     height: 80% !important;
     grid-area: 1/2/2/3;
   }
@@ -1093,7 +1109,12 @@ section.footer-link {
     margin-top: 0 !important;
   }
 
-  .button-see-this-project-1 {
+  .button-see-this-project-1,
+  .button-see-this-project-2,
+  .button-see-this-project-3,
+  .button-see-this-project-4,
+  .button-see-this-project-5,
+  .button-see-this-project-6 {
     padding-top: 3% !important;
     margin-top: 3% !important;
     transition: all 0.5s ease-out;
@@ -1103,4 +1124,140 @@ section.footer-link {
     display: flex;
     flex-direction: column;
   }
+
+  .projects-popup-paragraph {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+  }
+
+  .projects-popup-button-container {
+    padding-left: 16%;
+  }
+
+  .projects-popup-button {
+    text-align: left !important;
+    padding-left: 2% !important;
+  }
+
+  .projects-popup-container {
+    overflow: scroll;
+    height: 90vh !important;
+  }
+}
+
+.projects-popup-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  height: 95vh;
+  overflow: scroll;
+}
+
+.projects-popup-title {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 80%;
+  color: #1a2236;
+}
+
+.projects-popup-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1a2236;
+}
+
+.projects-popup-button {
+  position: relative;
+  align-self: center;
+  font-family: 'Poppins', monospace;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #1a2236;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #1a2236;
+  width: 246px;
+  height: 51px;
+  margin: 5%;
+  transition: all 0.5s ease-out;
+}
+
+.projects-popup-button:hover {
+  background: #1a2236;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.projects-popup-button:focus {
+  background: #fff;
+  color: #1a2236;
+  border: 2px solid #fff;
+}
+
+.projects-popup-button-icon {
+  position: absolute;
+  right: 7%;
+}
+
+#lenguagesPopup {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0%;
+}
+
+.boxlenguages-pop {
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #1a2236;
+  color: #1a2236;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 80%;
+  background-color: #fff;
+  padding: 1.5%;
+  margin-right: 3%;
+}
+
+.projects-popup-img-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects-popup-img {
+  width: 100%;
+}
+
+.projects-popup-divXButton-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+#projects-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.projects-button-icon {
+  position: absolute;
+  right: 7%;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: scroll;
 }
