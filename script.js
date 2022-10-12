@@ -132,17 +132,17 @@ for (let i = 0; i < projects.length; i += 1) {
   sectionBoxBlue.appendChild(ulProjects);
 
   const liProjects1 = document.createElement('li');
-  liProjects1.textContent = projects(i).technologies(0);
+  liProjects1.textContent = projects[i].technologies['0'];
   liProjects1.className = 'boxlenguages';
   ulProjects.appendChild(liProjects1);
 
   const liProjects2 = document.createElement('li');
-  liProjects2.textContent = projects(i).technologies(1);
+  liProjects2.textContent = projects[i].technologies['1'];
   liProjects2.className = 'boxlenguages';
   ulProjects.appendChild(liProjects2);
 
   const liProjects3 = document.createElement('li');
-  liProjects3.textContent = projects(i).technologies(2);
+  liProjects3.textContent = projects[i].technologies['2'];
   liProjects3.className = 'boxlenguages';
   ulProjects.appendChild(liProjects3);
 
@@ -251,17 +251,17 @@ function createProject(project) {
   document.getElementById('projects-popup').appendChild(ul);
 
   const li = document.createElement('li');
-  li.textContent = project.technologies(0);
+  li.textContent = project.technologies['0'];
   li.className = 'boxlenguages-pop';
   ul.appendChild(li);
 
   const lisecond = document.createElement('li');
-  lisecond.textContent = project.technologies(1);
+  lisecond.textContent = project.technologies['1'];
   lisecond.className = 'boxlenguages-pop';
   ul.appendChild(lisecond);
 
   const listhird = document.createElement('li');
-  listhird.textContent = project.technologies(2);
+  listhird.textContent = project.technologies['2'];
   listhird.className = 'boxlenguages-pop';
   ul.appendChild(listhird);
 
@@ -337,7 +337,7 @@ for (let i = 0; i < projects.length; i += 1) {
       div.className = 'projects-popup-container';
       document.body.append(div);
       document.body.classList.add('stop-scroll');
-      createProject(projects(i));
+      createProject(projects[i]);
       const close = document.querySelector('.projects-popup-divXButton');
       close.addEventListener('click', () => {
         document.body.classList.remove('stop-scroll');
@@ -353,7 +353,7 @@ for (let i = 0; i < projects.length; i += 1) {
       div.className = 'projects-popup-container';
       document.body.append(div);
       document.body.classList.add('stop-scroll');
-      createProject(projects(i));
+      createProject(projects[i]);
       const close = document.querySelector('.projects-popup-divXButton');
       close.addEventListener('click', () => {
         document.body.classList.remove('stop-scroll');
@@ -369,7 +369,7 @@ for (let i = 0; i < projects.length; i += 1) {
       div.className = 'projects-popup-container';
       document.body.append(div);
       document.body.classList.add('stop-scroll');
-      createProject(projects(i));
+      createProject(projects[i]);
       const close = document.querySelector('.projects-popup-divXButton');
       close.addEventListener('click', () => {
         document.body.classList.remove('stop-scroll');
