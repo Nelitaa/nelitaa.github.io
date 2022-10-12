@@ -1,3 +1,171 @@
+let projects = [
+  { name: 'Project 1 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 2 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=13ayEXXW-B43VX-TAXmpqdcKM0ElcgvUX', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 3 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1BGe71kPBmeKQ9YSNCfPwRLgYSCdeIJdo', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 4 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1TndTLN0JFv6vbAgfiYqASfGdnZh23x5K', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 5 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1Fc6Zn6dB3FL5s7n4CAllHlAKAj_7W3Oj', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+  { name: 'Project 6 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1oYeLFQU5OUAQsQkJtap0sK5FfpjJUvIe', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link' },
+];
+
+let sectionh2 = document.createElement('section');
+sectionh2.className = 'presentation-project';
+document.getElementById('portfolio').appendChild(sectionh2);
+
+let h2Projects = document.createElement('h2');
+h2Projects.textContent = 'Projects';
+h2Projects.className = 'rotate-projects';
+sectionh2.appendChild(h2Projects);
+
+for (let i = 0; i < projects.length; i++) {
+  let sectionBox = document.createElement('section');
+  if (i === 0) {
+    sectionBox.className = 'projects-section';
+  }
+  if (i === 1) {
+    sectionBox.className = 'projects-section-2';
+  }
+  if (i === 2) {
+    sectionBox.className = 'projects-section-3';
+  }
+  if (i === 3) {
+    sectionBox.className = 'projects-section-4';
+  }
+  if (i === 4) {
+    sectionBox.className = 'projects-section-5';
+  }
+  if (i === 5) {
+    sectionBox.className = 'projects-section-6';
+  }
+  document.getElementById('portfolio').appendChild(sectionBox);
+
+  let divProjectImage = document.createElement('div');
+  if (i === 0) {
+    divProjectImage.className = 'projects-image';
+  }
+  if (i === 1) {
+    divProjectImage.className = 'projects-image-2';
+  }
+  if (i === 2) {
+    divProjectImage.className = 'projects-image-3';
+  }
+  if (i === 3) {
+    divProjectImage.className = 'projects-image-4';
+  }
+  if (i === 4) {
+    divProjectImage.className = 'projects-image-5';
+  }
+  if (i === 5) {
+    divProjectImage.className = 'projects-image-6';
+  }
+  sectionBox.appendChild(divProjectImage);
+
+  if (i === 0) {
+    let imgProject1 = document.createElement('img');
+    imgProject1.className = 'image-project1';
+    imgProject1.src = 'https://drive.google.com/uc?export=download&id=1HXlJfB-0riqWY9-I0zuQHusZCi2KxYa_';
+    divProjectImage.appendChild(imgProject1);
+  }
+
+  let imgProject = document.createElement('img');
+  if (i === 0) {
+    imgProject.className = 'image-project11';
+  }
+  imgProject.src = projects[i].image;
+  divProjectImage.appendChild(imgProject);
+
+  let sectionBoxBlue = document.createElement('section');
+  if (i === 0) {
+    sectionBoxBlue.className = 'boxblue-1';
+  }
+  if (i === 1) {
+    sectionBoxBlue.className = 'boxblue';
+  }
+  if (i === 2) {
+    sectionBoxBlue.className = 'boxblue';
+  }
+  if (i === 3) {
+    sectionBoxBlue.className = 'boxblue';
+  }
+  if (i === 4) {
+    sectionBoxBlue.className = 'boxblue';
+  }
+  if (i === 5) {
+    sectionBoxBlue.className = 'boxblue';
+  }
+  sectionBox.appendChild(sectionBoxBlue);
+
+  let h3Projects = document.createElement('h3');
+  h3Projects.textContent = projects[i].name;
+  sectionBoxBlue.appendChild(h3Projects);
+
+  let ulProjects = document.createElement('ul');
+  if (i === 0) {
+    ulProjects.className = 'lenguages-1';
+  }
+  if (i === 1) {
+    ulProjects.className = 'lenguages';
+  }
+  if (i === 2) {
+    ulProjects.className = 'lenguages';
+  }
+  if (i === 3) {
+    ulProjects.className = 'lenguages';
+  }
+  if (i === 4) {
+    ulProjects.className = 'lenguages';
+  }
+  if (i === 5) {
+    ulProjects.className = 'lenguages';
+  }
+  sectionBoxBlue.appendChild(ulProjects);
+
+  let liProjects1 = document.createElement('li');
+  liProjects1.textContent = projects[i].technologies[0];
+  liProjects1.className = 'boxlenguages';
+  ulProjects.appendChild(liProjects1);
+
+  let liProjects2 = document.createElement('li');
+  liProjects2.textContent = projects[i].technologies[1];
+  liProjects2.className = 'boxlenguages';
+  ulProjects.appendChild(liProjects2);
+
+  let liProjects3 = document.createElement('li');
+  liProjects3.textContent = projects[i].technologies[2];
+  liProjects3.className = 'boxlenguages';
+  ulProjects.appendChild(liProjects3);
+
+  let buttonSeeThisProject = document.createElement('button');
+  buttonSeeThisProject.type = 'submit';
+  buttonSeeThisProject.textContent = 'See this project';
+  buttonSeeThisProject.className = 'button-see-this-project-1';
+  sectionBoxBlue.appendChild(buttonSeeThisProject);
+
+  let iconButtonSeeThisProject = document.createElement('img');
+  iconButtonSeeThisProject.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
+  iconButtonSeeThisProject.className = 'projects-button-icon';
+  buttonSeeThisProject.appendChild(iconButtonSeeThisProject);
+
+  let divBackground1 = document.createElement('div');
+  divBackground1.className = 'background-1';
+  document.getElementById('portfolio').appendChild(divBackground1);
+
+  let divBackground2 = document.createElement('div');
+  divBackground2.className = 'background-2';
+  document.getElementById('portfolio').appendChild(divBackground2);
+
+  let divBackground3 = document.createElement('div');
+  divBackground3.className = 'background-3';
+  document.getElementById('portfolio').appendChild(divBackground3);
+
+  let divBackground4 = document.createElement('div');
+  divBackground4.className = 'background-4';
+  document.getElementById('portfolio').appendChild(divBackground4);
+
+  let divBackground5 = document.createElement('div');
+  divBackground5.className = 'background-5';
+  document.getElementById('portfolio').appendChild(divBackground5);
+}
+
 const menu = document.querySelector('.nav-icon');
 const popUp = document.querySelector('.navigation');
 const xButton = document.querySelector('.xbutt');
@@ -32,15 +200,6 @@ document.querySelector('.xbutt').addEventListener('click', () => {
   links.classList.remove('active');
   navX.classList.toggle('active');
 })
-
-let projects = [
-  {name: 'Project 1 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-  {name: 'Project 2 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-  {name: 'Project 3 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-  {name: 'Project 4 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-  {name: 'Project 5 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-  {name: 'Project 6 name goes here', description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1lE_wmNcpcJ5wBxt35Zrao7AdcgxTQp46',  imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link'},
-];
 
 let open = document.querySelector('.button-see-this-project-1');
 open.addEventListener('click', () => {
@@ -128,8 +287,8 @@ function createProject(project) {
   document.getElementById('projects-popup').appendChild(p);
 
   let divButton = document.createElement('div');
-  divButton .id = 'projects-popup-button';
-  divButton .className = 'projects-popup-button-container';
+  divButton.id = 'projects-popup-button';
+  divButton.className = 'projects-popup-button-container';
   document.getElementById('projects-popup').appendChild(divButton);
 
   let buttonDemo = document.createElement('button');
@@ -142,7 +301,7 @@ function createProject(project) {
   iconButtonDemo.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
   iconButtonDemo.className = 'projects-popup-button-icon';
   buttonDemo.appendChild(iconButtonDemo);
- 
+
   let buttonSource = document.createElement('button');
   buttonSource.type = 'submit';
   buttonSource.textContent = 'See source';
