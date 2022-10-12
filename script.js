@@ -416,9 +416,11 @@ for (let i = 0; i < projects.length; i += 1) {
       div.id = 'projects-popup';
       div.className = 'projects-popup-container';
       document.body.append(div);
+      document.body.classList.add('stop-scroll');
       createProject(projects[i]);
       const close = document.querySelector('.projects-popup-divXButton');
       close.addEventListener('click', () => {
+        document.body.classList.remove('stop-scroll');
         document.body.removeChild(div);
       });
     });

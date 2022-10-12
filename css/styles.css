@@ -1139,13 +1139,18 @@ section.footer-link {
     text-align: left !important;
     padding-left: 2% !important;
   }
+
+  .projects-popup-container {
+    overflow: scroll;
+    height: 90vh !important;
+  }
 }
 
 .projects-popup-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 5%;
+  height: 100vh;
 }
 
 .projects-popup-title {
@@ -1240,7 +1245,7 @@ section.footer-link {
 }
 
 #projects-popup {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
@@ -1249,4 +1254,9 @@ section.footer-link {
 .projects-button-icon {
   position: absolute;
   right: 7%;
+}
+
+.stop-scroll{
+  height: 100%;
+  overflow: hidden;
 }
