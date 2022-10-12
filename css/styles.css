@@ -1150,7 +1150,8 @@ section.footer-link {
   display: flex;
   flex-direction: column;
   padding: 5%;
-  height: 100vh;
+  height: 95vh;
+  overflow: scroll;
 }
 
 .projects-popup-title {
@@ -1258,5 +1259,5 @@ section.footer-link {
 
 .stop-scroll {
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
