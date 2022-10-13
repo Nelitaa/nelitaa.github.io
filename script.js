@@ -426,3 +426,50 @@ for (let i = 0; i < projects.length; i += 1) {
     });
   }
 }
+
+function showMsg(input, messages, type) {
+  const message = input.parentNode.querySelector('small');
+  message.innerText = messages;
+  input.className = type ? 'success' : 'error';
+  return type;
+}
+
+function showErr(input, messages) {
+  return showMsg(input, messages, false);
+}
+
+function showSucss(input) {
+  return showMsg(input, '', true);
+}
+
+function whitValue(input, messages) {
+  if (input.value.trim() === '') {
+    return showErr(input, messages);
+  }
+  return showSucss(input);
+}
+
+function validate(input, requiredMessage, invalidMessage) {
+  if (!whitValue(input, requiredMessage)) {
+    return false;
+  }
+  const email = input.value.trim();
+  if (!/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/.test(email)) {
+    return showErr(input, invalidMessage);
+  }
+  return true;
+}
+
+const form = document.querySelector('#form-contact');
+const RequiredName = 'Please enter your name';
+const RequiredEmail = 'Please enter your email';
+const InvalidEmail = 'Please enter a correct email address format. The has to be in lower case.';
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const validName = whitValue(form.elements.name, RequiredName);
+  const validEmail = validate(form.elements.email, RequiredEmail, InvalidEmail);
+  if (validName && validEmail) {
+    alert('Formulario enviado');
+  }
+});
