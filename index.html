@@ -143,7 +143,6 @@
           class="form"
           id="form-contact"
         >
-          <div class="field">
             <label for="name" hidden>Name</label>
             <input
               type="text"
@@ -154,9 +153,6 @@
               maxlength="30"
               required
             />
-            <small></small>
-          </div>
-          <div class="field">
             <label for="email" hidden>Email</label>
             <input
               type="email"
@@ -165,22 +161,19 @@
               name="email"
               placeholder="Your email"
             />
-            <small></small>
-          </div>
           <label for="message" hidden>Message</label>
           <textarea
             id="message"
             class="contact-form-message input-hover"
             name="message"
             placeholder="Enter your message here.."
-            id=""
             cols="30"
             rows="10"
             maxlength="500"
             required
           ></textarea>
           <div class="contact-button">
-            <button class="button-start-collaboration" type="submit">
+            <button class="button-start-collaboration" type="submit" id="formButton">
               Start collaboration
             </button>
             <div id="errorm"></div>
