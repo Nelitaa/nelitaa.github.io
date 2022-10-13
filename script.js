@@ -473,9 +473,25 @@ form.addEventListener('submit', (event) => {
 });
 
 const nameInput = document.querySelector('#name');
-nameInput.value = JSON.parse(localStorage.getItem('form')).name;
+nameInput.value = JSON.parse(localStorage.getItem('form'))?.name || '';
 nameInput.addEventListener('input', (name) => {
-  const objForm = JSON.parse(localStorage.getItem('form'));
+  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
   objForm.name = name.target.value;
+  localStorage.setItem('form', JSON.stringify(objForm));
+});
+
+const mailInput = document.querySelector('#email');
+mailInput.value = JSON.parse(localStorage.getItem('form'))?.email || '';
+mailInput.addEventListener('input', (email) => {
+  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
+  objForm.email = email.target.value;
+  localStorage.setItem('form', JSON.stringify(objForm));
+});
+
+const textAreaInput = document.querySelector('#message');
+textAreaInput.value = JSON.parse(localStorage.getItem('form'))?.message || '';
+textAreaInput.addEventListener('input', (message) => {
+  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
+  objForm.message = message.target.value;
   localStorage.setItem('form', JSON.stringify(objForm));
 });
