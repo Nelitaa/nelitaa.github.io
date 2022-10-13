@@ -428,7 +428,7 @@ for (let i = 0; i < projects.length; i += 1) {
 }
 
 function showMsg(input, messages, type) {
-  const message = input.parentNode.querySelector('small');
+  const message = document.getElementById('errorm');
   message.innerText = messages;
   input.className = type ? 'success' : 'error';
   return type;
@@ -461,15 +461,13 @@ function validate(input, requiredMessage, invalidMessage) {
 }
 
 const form = document.querySelector('#form-contact');
-const RequiredName = 'Please enter your name';
-const RequiredEmail = 'Please enter your email';
-const InvalidEmail = 'Please enter a correct email address format. The has to be in lower case.';
+const RequiredEmail = 'Please enter your email. Form not submitted';
+const InvalidEmail = 'Please enter a correct email address format. The email has to be in lower case. Form not submitted';
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const validName = whitValue(form.elements.name, RequiredName);
   const validEmail = validate(form.elements.email, RequiredEmail, InvalidEmail);
-  if (validName && validEmail) {
-    alert('Formulario enviado');
+  if (validEmail) {
+    alert('Form submitted');
   }
 });
