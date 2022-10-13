@@ -471,3 +471,11 @@ form.addEventListener('submit', (event) => {
     alert('Form submitted');
   }
 });
+
+const nameInput = document.querySelector('#name');
+nameInput.value = JSON.parse(localStorage.getItem('form')).name;
+nameInput.addEventListener('input', (name) => {
+  const objForm = JSON.parse(localStorage.getItem('form'));
+  objForm.name = name.target.value;
+  localStorage.setItem('form', JSON.stringify(objForm));
+});
