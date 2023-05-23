@@ -1,7 +1,8 @@
 html {
-  background-image: url(https://drive.google.com/uc?export=download&id=1JyiPK__YybyjC0fb5hpn7i1DF8sxri33);
+  background-image: url(https://drive.google.com/uc?export=download&id=1kyxBokabJlD_TvPKAiUbLAh7nZuCbC-x);
   background-repeat: no-repeat;
   background-position: 0% 0%;
+  background-size: 35vw;
 }
 
 body {
@@ -9,16 +10,14 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 li > a {
   text-decoration: none;
   color: #1a2236;
-  margin-top: 14%;
-  width: 100%;
   transition: all 0.5s ease-out;
-}
-
-li > a:hover {
-  color: #fff;
 }
 
 header {
@@ -26,6 +25,22 @@ header {
   flex-direction: column;
   justify-content: center;
   height: auto;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+  padding: 4%;
+  cursor: pointer;
+}
+
+.hamburger.active {
+  position: absolute;
+}
+
+nav ul {
+  display: none;
 }
 
 .navigation {
@@ -54,12 +69,12 @@ header {
   left: 0;
 }
 
-.xbutt {
+.close-button {
   cursor: pointer;
   left: -100%;
 }
 
-.xbutt.active {
+.close-button.active {
   left: 0;
   float: right;
   cursor: pointer;
@@ -68,22 +83,6 @@ header {
 .nav-pages-pop.active {
   left: 0;
   position: relative;
-}
-
-.nav-icon {
-  display: flex;
-  justify-content: flex-end;
-  height: auto;
-  padding: 4%;
-  cursor: pointer;
-}
-
-.nav-icon.active {
-  position: absolute;
-}
-
-.nav-pages {
-  display: none;
 }
 
 ul.nav-pages-pop {
@@ -646,21 +645,21 @@ section.footer-link {
 
   header {
     box-shadow: 0 0.5px 0 #dddfe6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
   }
 
-  div.nav-icon {
+  .hamburger {
     display: none;
   }
 
-  .navigation.active {
-    display: none;
-  }
-
-  ul.nav-pages {
+  nav ul {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr 3fr;
     justify-content: center;
-    list-style-type: none;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -673,79 +672,50 @@ section.footer-link {
     padding: 0;
   }
 
-  ul.nav-pages-pop {
+  nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14%;
+    transition: all 0.5s ease-out;
+  }
+
+  nav ul li:hover,
+  nav ul li:focus {
+    background-color: #1a2236;
+  }
+
+  nav ul li:hover a,
+  nav ul li:focus a {
+    color: #fff;
+  }
+
+  .hello {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .portfolio {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .about {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
+  .contact {
+    grid-column-start: 5;
+    grid-column-end: 6;
+  }
+
+  .navigation.active {
     display: none;
   }
 
-  li.nav-pages-hello {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding: 14%;
-    transition: all 0.5s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li.nav-pages-hello:hover,
-  li.nav-pages-hello:focus {
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid;
-  }
-
-  li.nav-pages-portofilo {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    padding: 14%;
-    transition: all 0.5s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li.nav-pages-portofilo:hover,
-  li.nav-pages-portofilo:focus {
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid;
-  }
-
-  li.nav-pages-about {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    padding: 14%;
-    transition: all 0.5s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li.nav-pages-about:hover,
-  li.nav-pages-about:focus {
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li.nav-pages-contact {
-    grid-column-start: 5;
-    grid-column-end: 6;
-    padding: 14%;
-    transition: all 0.5s ease-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li.nav-pages-contact:hover,
-  li.nav-pages-contact:focus {
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid;
+  ul.nav-pages-pop {
+    display: none;
   }
 
   main.main-presentation {
