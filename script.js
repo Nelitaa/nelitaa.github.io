@@ -1,3 +1,35 @@
+/* Navigation Menu */
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.navigation-menu');
+const close = document.querySelector('.close-icon');
+const pages = document.querySelectorAll('.nav-pages-menu li');
+const body = document.querySelector('body');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('hide');
+  menu.classList.toggle('active');
+  close.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = '';
+  }
+});
+
+close.addEventListener('click', () => {
+  hamburger.classList.remove('hide');
+  menu.classList.remove('active');
+  close.classList.remove('active');
+  body.style.overflow = '';
+});
+
+pages.forEach((i) => i.addEventListener('click', () => {
+  hamburger.classList.remove('hide');
+  menu.classList.remove('active');
+  close.classList.remove('active');
+  body.style.overflow = '';
+}));
+
 const projects = [
   {
     name: 'Project 1 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1HXlJfB-0riqWY9-I0zuQHusZCi2KxYa_', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
@@ -194,41 +226,6 @@ for (let i = 0; i < projects.length; i += 1) {
   divBackground5.className = 'background-5';
   document.getElementById('portfolio').appendChild(divBackground5);
 }
-
-const menu = document.querySelector('.nav-icon');
-const popUp = document.querySelector('.navigation');
-const xButton = document.querySelector('.xbutt');
-const scrollb = document.querySelector('body');
-const links = document.querySelector('.nav-pages-pop');
-const navX = document.querySelector('.nav-icon-pop');
-
-menu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  popUp.classList.toggle('active');
-  scrollb.classList.toggle('active');
-  xButton.classList.toggle('active');
-  links.classList.toggle('active');
-  navX.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-pages-pop').forEach((i) => i.addEventListener('click', () => {
-  menu.classList.remove('active');
-  popUp.classList.remove('active');
-  scrollb.classList.remove('active');
-  xButton.classList.remove('active');
-  links.classList.remove('active');
-  navX.classList.toggle('active');
-}));
-
-document.querySelector('.xbutt').addEventListener('click', () => {
-  xButton.classList.remove('active');
-  menu.classList.remove('active');
-  popUp.classList.remove('active');
-  scrollb.classList.remove('active');
-  xButton.classList.remove('active');
-  links.classList.remove('active');
-  navX.classList.toggle('active');
-});
 
 function createProject(project) {
   const divXButton = document.createElement('div');
