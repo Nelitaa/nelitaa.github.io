@@ -425,7 +425,7 @@ for (let i = 0; i < projects.length; i += 1) {
 }
 
 function showMsg(input, messages, type) {
-  const message = document.getElementById('errorm');
+  const message = document.getElementById('form-message');
   message.innerText = messages;
   input.className = type ? 'success' : 'error';
   return type;
@@ -457,7 +457,7 @@ function validate(input, requiredMessage, invalidMessage) {
   return true;
 }
 
-const form = document.querySelector('#form-contact');
+const form = document.querySelector('form');
 const RequiredEmail = 'Please enter your email. Form not submitted';
 const InvalidEmail = 'Please enter a correct email address format. The email has to be in lower case. Form not submitted';
 
