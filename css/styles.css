@@ -175,6 +175,8 @@ form {
 }
 
 label {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -189,7 +191,7 @@ input {
   background: #fff;
   border: 1px solid #dfdfe0;
   border-radius: 4px;
-  color: #7d7c84;
+  color: #1a2236;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -742,13 +744,13 @@ section.blocks {
   }
 
   h2 {
-    text-shadow: 2px 0 0 #1a2236;
-    font-size: 300%;
-    margin: 3% 0 3% 0;
+    font-size: 430%;
+    text-align: center;
+    margin: 2vw 0 2vw 0;
   }
 
   .contact-form p {
-    font-size: 80%;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -827,11 +829,12 @@ section.blocks {
   /* Contact section */
   #contact {
     flex-direction: row;
+    height: 92vh;
   }
 
   .contact-background-left {
     display: flex;
-    width: 25%;
+    width: 31%;
     background-image: url(https://drive.google.com/uc?export=download&id=1TizzuS7O_NrHLIALDGjTjaU8lOfWMly6);
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -840,22 +843,60 @@ section.blocks {
 
   .contact-background-right {
     display: flex;
-    width: 28%;
+    width: 31%;
     background-image: url(https://drive.google.com/uc?export=download&id=1_dW8Mn8gtm1fqw0q0vFzxQsyrNnhWGMR);
     background-repeat: no-repeat;
-    background-size: 40vh;
+    background-size: 35vh;
     background-position: 100% 100%;
   }
 
   .contact-form {
-    width: 47%;
+    width: 38%;
     background-image: none;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 8% 0 5% 0;
+  }
+
+  form {
+    margin-top: 5%;
+  }
+
+  .inputs-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 0;
   }
 
   input {
-    padding: 5% 5% 5% 10%;
+    height: 35px;
+    padding: 8%;
+    font-size: 12px;
+    color: #1a2236;
+    margin-top: 0;
+  }
+
+  textarea {
+    height: 75px;
+    font-size: 12px;
+    color: #1a2236;
+    margin-top: 0;
+  }
+
+  .contact-button-container {
+    padding-top: 3%;
+  }
+
+  .button-start-collaboration {
+    padding: 2%;
+    font-size: 12px;
+    width: 50%;
+    align-self: center;
   }
 
   /* Footer */
