@@ -1,10 +1,11 @@
-/* Navigation Menu */
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.navigation-menu');
 const close = document.querySelector('.close-icon');
 const pages = document.querySelectorAll('.nav-pages-menu li');
 const body = document.querySelector('body');
+const form = document.querySelector('form');
 
+/* Navigation Menu */
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('hide');
   menu.classList.toggle('active');
@@ -29,6 +30,13 @@ pages.forEach((i) => i.addEventListener('click', () => {
   close.classList.remove('active');
   body.style.overflow = '';
 }));
+
+/* Reset form */
+form.addEventListener('submit', () => {
+  setTimeout(() => {
+    form.reset();
+  }, 100);
+});
 
 const projects = [
   {
@@ -423,72 +431,3 @@ for (let i = 0; i < projects.length; i += 1) {
     });
   }
 }
-
-function showMsg(input, messages, type) {
-  const message = document.getElementById('form-message');
-  message.innerText = messages;
-  input.className = type ? 'success' : 'error';
-  return type;
-}
-
-function showErr(input, messages) {
-  return showMsg(input, messages, false);
-}
-
-function showSucss(input) {
-  return showMsg(input, '', true);
-}
-
-function whitValue(input, messages) {
-  if (input.value.trim() === '') {
-    return showErr(input, messages);
-  }
-  return showSucss(input);
-}
-
-function validate(input, requiredMessage, invalidMessage) {
-  if (!whitValue(input, requiredMessage)) {
-    return false;
-  }
-  const email = input.value.trim();
-  if (!/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/.test(email)) {
-    return showErr(input, invalidMessage);
-  }
-  return true;
-}
-
-const form = document.querySelector('form');
-const RequiredEmail = 'Please enter your email. Form not submitted';
-const InvalidEmail = 'Please enter a correct email address format. The email has to be in lower case. Form not submitted';
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const validEmail = validate(form.elements.email, RequiredEmail, InvalidEmail);
-  if (validEmail) {
-    alert('Form submitted');
-  }
-});
-
-const nameInput = document.querySelector('#name');
-nameInput.value = JSON.parse(localStorage.getItem('form'))?.name || '';
-nameInput.addEventListener('input', (name) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.name = name.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});
-
-const mailInput = document.querySelector('#email');
-mailInput.value = JSON.parse(localStorage.getItem('form'))?.email || '';
-mailInput.addEventListener('input', (email) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.email = email.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});
-
-const textAreaInput = document.querySelector('#message');
-textAreaInput.value = JSON.parse(localStorage.getItem('form'))?.message || '';
-textAreaInput.addEventListener('input', (message) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.message = message.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});

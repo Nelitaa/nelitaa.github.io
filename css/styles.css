@@ -52,6 +52,7 @@ h2 {
   color: #fff;
   background: #1a2236;
   padding: 5%;
+  margin-top: 5%;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -203,12 +204,6 @@ input {
 textarea {
   height: 150px;
   padding: 5%;
-}
-
-.contact-button-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5%;
 }
 
 /* Footer */
@@ -754,6 +749,14 @@ section.blocks {
     margin: 0;
   }
 
+  .button-start-collaboration {
+    padding: 2%;
+    margin-top: 3%;
+    font-size: 12px;
+    width: 50%;
+    align-self: center;
+  }
+
   /* Header */
   header {
     box-shadow: 0 0.5px 0 #dddfe6;
@@ -853,7 +856,7 @@ section.blocks {
   .contact-form {
     width: 38%;
     background-image: none;
-    padding: 8% 0 5% 0;
+    padding: 10% 0 5% 0;
   }
 
   form {
@@ -886,17 +889,6 @@ section.blocks {
     font-size: 12px;
     color: #1a2236;
     margin-top: 0;
-  }
-
-  .contact-button-container {
-    padding-top: 3%;
-  }
-
-  .button-start-collaboration {
-    padding: 2%;
-    font-size: 12px;
-    width: 50%;
-    align-self: center;
   }
 
   /* Footer */
