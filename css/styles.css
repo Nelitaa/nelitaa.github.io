@@ -34,6 +34,7 @@ h2 {
   margin: 4vw 0 4vw 0;
 }
 
+.presentation p,
 .contact-form p {
   font-family: 'Poppins', monospace;
   font-style: normal;
@@ -52,7 +53,7 @@ h2 {
   color: #fff;
   background: #1a2236;
   padding: 5%;
-  margin-top: 5%;
+  margin: 5% 0 5% 0;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -139,6 +140,32 @@ header {
 .nav-pages-menu li:hover a,
 .nav-pages-menu li:focus a {
   font-size: xx-large;
+}
+
+/* Presentation section*/
+#presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92vh;
+}
+
+.presentation-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 12% 6% 6% 6%;
+}
+
+.background-presentation {
+  background-image: url(https://drive.google.com/uc?export=download&id=1XupJ_UCzxSKQsUBwjQA3x7wICdzCN6DP);
+  background-size: cover;
+  height: 100%;
+}
+
+.background-presentation-dots {
+  display: none;
 }
 
 /* Contact section*/
@@ -247,38 +274,7 @@ footer {
   height: 50%;
   padding: 10% 20% 10% 20%;
 }
-
-main.main-presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6%;
-  margin-top: 15%;
-  margin-bottom: 7%;
-}
-
-.presentation-project {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6%;
-  margin-top: 15%;
-  margin-bottom: 7%;
-}
-
-.background-presentation-big {
-  background-image: url(https://drive.google.com/uc?export=download&id=1XupJ_UCzxSKQsUBwjQA3x7wICdzCN6DP);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vw;
-}
-
+/* 
 main.projects-main {
   display: flex;
   flex-direction: column;
@@ -731,7 +727,7 @@ section.blocks {
 .stop-scroll {
   height: 100%;
   overflow: scroll;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   html {
@@ -744,6 +740,7 @@ section.blocks {
     margin: 2vw 0 2vw 0;
   }
 
+  .presentation p,
   .contact-form p {
     font-size: 14px;
     margin: 0;
@@ -764,6 +761,7 @@ section.blocks {
     top: 0;
     left: 0;
     width: 100%;
+    height: 8vh;
     background-color: #fff;
   }
 
@@ -829,10 +827,43 @@ section.blocks {
     display: none;
   }
 
+  /* Presentation section */
+  #presentation {
+    flex-direction: row;
+    padding-left: 4%;
+    height: 92vh;
+    margin-top: 8vh;
+    scroll-margin-top: 8vh;
+  }
+
+  #presentation h2 {
+    text-align: left;
+  }
+
+  #presentation button {
+    align-self: flex-start;
+  }
+
+  .background-presentation {
+    background-image: url(https://drive.google.com/uc?export=download&id=1Ti61f904kN4cD8MO4KBwn9tDa5WC4SfK);
+    width: 55vw;
+  }
+
+  .presentation-content {
+    padding: 0 6% 0 6%;
+    width: 45vw;
+    background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 17%;
+  }
+
   /* Contact section */
   #contact {
     flex-direction: row;
     height: 92vh;
+    margin-top: 8vh;
+    scroll-margin-top: 8vh;
   }
 
   .contact-background-left {
@@ -933,41 +964,12 @@ section.blocks {
   .icons-container a img {
     height: 20px;
   }
-
-  main.main-presentation {
-    flex-direction: row;
-    margin-left: 5%;
-  }
-
-  section.section-presentation {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-
-  div.presentation {
-    margin-top: 25%;
-    margin-right: 20%;
-  }
-
-  div.background-presentation-big {
-    background-image: url('../assets/img/image1.png');
-    width: 50%;
-    height: auto;
-  }
-
-  div.background-presentation-small {
-    background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    height: 12vw;
-  }
-
+/* 
   main.about-myself-main {
     flex-direction: row-reverse !important;
   }
 
-  section.presentation {
+  .presentation {
     width: 50%;
   }
 
@@ -1198,5 +1200,5 @@ section.blocks {
   .projects-popup-container {
     overflow: scroll;
     height: 90vh !important;
-  }
+  } */
 }
