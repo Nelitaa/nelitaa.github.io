@@ -159,6 +159,18 @@ header {
   height: 100%;
 }
 
+/* Projects section*/
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 8vh;
+}
+
+#projects h2 {
+  padding-left: 6%;
+}
+
 /* About section*/
 #about {
   display: flex;
@@ -319,13 +331,7 @@ footer {
   padding: 10% 20% 10% 20%;
 }
 /* 
-main.projects-main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10%;
-}
-
-section.projects-section {
+.projects-section {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -804,12 +810,12 @@ h3 {
   }
 
   h3 {
-    font-size: 19px;
+    font-size: 16px;
     margin: 0;
   }
 
   .blocks li {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   /* Contact section */
@@ -983,7 +989,7 @@ h3 {
     background-position: 100% 0%;
   }
 
-  section.presentation-project {
+  section.presentation-project (este era como el background de la seccion de proyectos){
     background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
     background-repeat: no-repeat;
     background-position: 100% 0%;
