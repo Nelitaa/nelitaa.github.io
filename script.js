@@ -70,23 +70,40 @@ for (let i = 0; i < projects.length; i += 1) {
   document.getElementById('projects').appendChild(card);
 
   const cardImage = document.createElement('img');
+  cardImage.className = 'projects-image';
+  cardImage.src = projects[i].image;
   card.appendChild(cardImage);
 
   const cardContent = document.createElement('div');
-  cardContent.className = 'card-content';
+  cardContent.className = 'boxblue';
   card.appendChild(cardContent);
 
   const cardTitle = document.createElement('h3');
+  cardTitle.textContent = projects[i].name;
   cardContent.appendChild(cardTitle);
 
-  const cardLanguages = document.createElement('ul');
-  cardContent.appendChild(cardLanguages);
+  const cardTechnologies = document.createElement('ul');
+  cardTechnologies.className = 'lenguages';
+  cardContent.appendChild(cardTechnologies);
+
+  for (let j = 0; j < projects[i].technologies.length; j += 1) {
+    const cardTechnology = document.createElement('li');
+    cardTechnology.textContent = projects[i].technologies[j];
+    cardTechnology.className = 'boxlenguages';
+    cardTechnologies.appendChild(cardTechnology);
+  }
 
   const cardButton = document.createElement('button');
+  cardButton.type = 'submit';
+  cardButton.textContent = 'See this project';
+  cardButton.className = 'button-see-this-project-1';
   cardContent.appendChild(cardButton);
+
+  const iconCardButton = document.createElement('img');
+  iconCardButton.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
+  iconCardButton.className = 'projects-button-icon';
+  cardButton.appendChild(iconCardButton);
 }
-
-
 
 
 
@@ -112,129 +129,12 @@ for (let i = 0; i < projects.length; i += 1) {
   }
   document.getElementById('projec').appendChild(sectionBox);
 
-  const divProjectImage = document.createElement('div');
-  if (i === 0) {
-    divProjectImage.className = 'projects-image';
-  }
-  if (i === 1) {
-    divProjectImage.className = 'projects-image-2';
-  }
-  if (i === 2) {
-    divProjectImage.className = 'projects-image-3';
-  }
-  if (i === 3) {
-    divProjectImage.className = 'projects-image-4';
-  }
-  if (i === 4) {
-    divProjectImage.className = 'projects-image-5';
-  }
-  if (i === 5) {
-    divProjectImage.className = 'projects-image-6';
-  }
-  sectionBox.appendChild(divProjectImage);
-
   if (i === 0) {
     const imgProject1 = document.createElement('img');
     imgProject1.className = 'image-project11';
     imgProject1.src = 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-';
     divProjectImage.appendChild(imgProject1);
   }
-
-  const imgProject = document.createElement('img');
-  if (i === 0) {
-    imgProject.className = 'image-project1';
-  }
-  imgProject.src = projects[i].image;
-  divProjectImage.appendChild(imgProject);
-
-  const sectionBoxBlue = document.createElement('section');
-  if (i === 0) {
-    sectionBoxBlue.className = 'boxblue-1';
-  }
-  if (i === 1) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 2) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 3) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 4) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 5) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  sectionBox.appendChild(sectionBoxBlue);
-
-  const h3Projects = document.createElement('h3');
-  h3Projects.textContent = projects[i].name;
-  sectionBoxBlue.appendChild(h3Projects);
-
-  const ulProjects = document.createElement('ul');
-  if (i === 0) {
-    ulProjects.className = 'lenguages-1';
-  }
-  if (i === 1) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 2) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 3) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 4) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 5) {
-    ulProjects.className = 'lenguages';
-  }
-  sectionBoxBlue.appendChild(ulProjects);
-
-  const liProjects1 = document.createElement('li');
-  liProjects1.textContent = projects[i].technologies['0'];
-  liProjects1.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects1);
-
-  const liProjects2 = document.createElement('li');
-  liProjects2.textContent = projects[i].technologies['1'];
-  liProjects2.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects2);
-
-  const liProjects3 = document.createElement('li');
-  liProjects3.textContent = projects[i].technologies['2'];
-  liProjects3.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects3);
-
-  const buttonSeeThisProject = document.createElement('button');
-  buttonSeeThisProject.type = 'submit';
-  buttonSeeThisProject.textContent = 'See this project';
-  if (i === 0) {
-    buttonSeeThisProject.className = 'button-see-this-project-1';
-  }
-  if (i === 1) {
-    buttonSeeThisProject.className = 'button-see-this-project-2';
-  }
-  if (i === 2) {
-    buttonSeeThisProject.className = 'button-see-this-project-3';
-  }
-  if (i === 3) {
-    buttonSeeThisProject.className = 'button-see-this-project-4';
-  }
-  if (i === 4) {
-    buttonSeeThisProject.className = 'button-see-this-project-5';
-  }
-  if (i === 5) {
-    buttonSeeThisProject.className = 'button-see-this-project-6';
-  }
-  sectionBoxBlue.appendChild(buttonSeeThisProject);
-
-  const iconButtonSeeThisProject = document.createElement('img');
-  iconButtonSeeThisProject.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
-  iconButtonSeeThisProject.className = 'projects-button-icon';
-  buttonSeeThisProject.appendChild(iconButtonSeeThisProject);
 
   const divBackground1 = document.createElement('div');
   divBackground1.className = 'background-1';
