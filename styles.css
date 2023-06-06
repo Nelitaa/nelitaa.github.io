@@ -171,6 +171,71 @@ header {
   padding-left: 6%;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content {
+  background-color: #1a2236;
+  padding: 6%;;
+}
+
+#projects h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+#projects ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+#projects li {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 8px;
+  background-color: #98dede;
+  padding: 1.5vh 2vw 1.5vh 2vw;
+  margin-right: 2%;
+  transition: all 0.5s ease-out;
+}
+
+#projects li:hover,
+#projects li:focus {
+  background-color: #fff;
+}
+
+#projects .main-button {
+  justify-content: left;
+  align-items: center;
+  width: 178px;
+  padding: 3%;
+  font-size: 16px;
+  border: 1px solid #fff;
+  margin-bottom: 0;
+}
+
+#projects .main-button:hover, 
+#projects .main-button:focus {
+  color: #1a2236;
+  border: 2px solid #fff;
+}
+
+#projects .main-button:focus {
+  background: #fff;
+}
+
+#projects .main-button img {
+  margin-left: 10%;
+}
+
 /* About section*/
 #about {
   display: flex;
@@ -330,69 +395,8 @@ footer {
   height: 50%;
   padding: 10% 20% 10% 20%;
 }
-/* desde aqui verificar */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6% 0 6% 0;
-}
-
-.card-content {
-  background-color: #1a2236;
-  padding: 6%;;
-}
-
-#projects h3 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 16px;
-  margin: 0;
-}
-
-#projects ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  padding: 0;
-}
-
-#projects li {
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 8px;
-  background-color: #98dede;
-  padding: 1.5vh 2vw 1.5vh 2vw;
-  margin-right: 2%;
-  transition: all 0.5s ease-out;
-}
-
-#projects li:hover,
-#projects li:focus {
-  background-color: #fff;
-}
-
-#projects .main-button {
-  justify-content: left;
-  width: 210px;
-  border: 1px solid #fff;
-}
-
-#projects .main-button:hover, 
-#projects .main-button:focus {
-  color: #1a2236;
-  border: 2px solid #fff;
-}
-
-#projects .main-button:focus {
-  background: #fff;
-}
 
 /* 
-.image-project11 {
-  display: none;
-}
 
 .projects-popup-container {
   display: flex;
@@ -768,6 +772,7 @@ footer {
   .icons-container a img {
     height: 20px;
   }
+
 /* 
   main.projects-main {
     display: grid;
