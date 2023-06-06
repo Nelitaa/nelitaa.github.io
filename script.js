@@ -41,22 +41,22 @@ form.addEventListener('submit', () => {
 /* Projects section */
 const projects = [
   {
-    name: 'Book an Appointment', description: 'This full stack app enables you to book appointments with doctors who specialize in your needs. You can reserve an appointment with a doctor of your choice, view and delete your appointments, and add or remove doctors from your list to find the perfect match for your healthcare needs.', image: 'https://drive.google.com/uc?export=download&id=', technologies: ['React', 'Ruby on Rails', 'PostgreSQL'], linkDemo: 'http://162.243.166.190/', linkSource: 'https://github.com/Nelitaa/book-an-appointment',
+    name: 'Book an Appointment', description: 'This full stack app enables you to book appointments with doctors who specialize in your needs. You can reserve an appointment with a doctor of your choice, view and delete your appointments, and add or remove doctors from your list to find the perfect match for your healthcare needs.', image: 'https://drive.google.com/uc?export=download&id=12u4nGRGtRKnNPd67HnzI7VM9OZp4DQDQ', technologies: ['React', 'Ruby on Rails', 'PostgreSQL'], linkDemo: 'http://162.243.166.190/', linkSource: 'https://github.com/Nelitaa/book-an-appointment',
   },
   {
-    name: 'Recipe App', description: 'The Recipe app tracks your recipes, ingredients, and inventory. You can save ingredients, create recipes, and generate a shopping list based on what you have and need. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.', image: 'https://drive.google.com/uc?export=download&id=', technologies: ['Ruby on Rails', 'PostgreSQL'], linkDemo: 'Coming Soon...', linkSource: 'https://github.com/Nelitaa/Recipe-App',
+    name: 'Recipe App', description: 'The Recipe app tracks your recipes, ingredients, and inventory. You can save ingredients, create recipes, and generate a shopping list based on what you have and need. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.', image: 'https://drive.google.com/uc?export=download&id=1Y-ErBwjQ6FZ4dCHDaPSmmLzrizMlGXfE', technologies: ['Ruby on Rails', 'PostgreSQL'], linkDemo: 'Coming Soon...', linkSource: 'https://github.com/Nelitaa/Recipe-App',
   },
   {
-    name: 'Catalog of my Things', description: "This repository contains a console application that helps users keep track of their books, music albums, movies, and games. The application is based on a UML class diagram, and the data is stored in JSON files. Additionally, we will provide a database with tables that mirror the program's class structure.", image: 'https://drive.google.com/uc?export=download&id=', technologies: ['Ruby', 'PostgreSQL'], linkDemo: 'https://www.loom.com/share/7c81e90f18bd4b9fb720729b0a0eb426', linkSource: 'https://github.com/Nelitaa/Catalog-of-my-things',
+    name: 'Math Magicians', description: 'Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.', image: 'https://drive.google.com/uc?export=download&id=1aNQuBhxFgPVgyjmjXJc38BVxQhDXaCwB', technologies: ['React'], linkDemo: 'https://math-magicians-zjk7.onrender.com/', linkSource: 'https://github.com/Nelitaa/Math-magicians',
   },
   {
-    name: 'I Love Food', description: 'This is a mobile web application that uses an external API to provide a seamless browsing experience for users exploring a variety of recipes from around the world, curated and organized by country. Users can track the popularity of each recipe with detailed view counts per recipe and by country and globally.', image: 'https://drive.google.com/uc?export=download&id=', technologies: ['React', 'Redux'], linkDemo: 'https://i-love-food.onrender.com/', linkSource: 'https://github.com/Nelitaa/I-love-food',
+    name: 'I Love Food', description: 'This is a mobile web application that uses an external API to provide a seamless browsing experience for users exploring a variety of recipes from around the world, curated and organized by country. Users can track the popularity of each recipe with detailed view counts per recipe and by country and globally.', image: 'https://drive.google.com/uc?export=download&id=1bPVDd9yVMZRB2I4CnzAN6VXlPaPZNC37', technologies: ['React', 'Redux'], linkDemo: 'https://i-love-food.onrender.com/', linkSource: 'https://github.com/Nelitaa/I-love-food',
   },
   {
-    name: 'The Meal DB', description: 'This repository hosts The Meal DB, a web application that utilizes an external API to provide a comprehensive database of meals, complete with information such as name, image, and description. Users can interact with the meals by liking or commenting on them. Our team collaborated using a kanban board to ensure a successful project delivery.', image: 'https://drive.google.com/uc?export=download&id=', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Capstone-Project-JavaScript/dist/', linkSource: 'https://github.com/Nelitaa/The-Meal-DB',
+    name: 'The Meal DB', description: 'This repository hosts The Meal DB, a web application that utilizes an external API to provide a comprehensive database of meals, complete with information such as name, image, and description. Users can interact with the meals by liking or commenting on them. Our team collaborated using a kanban board to ensure a successful project delivery.', image: 'https://drive.google.com/uc?export=download&id=1PE1UTxWpy4YTS_0ninanlBLBKtml4Y9u', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Capstone-Project-JavaScript/dist/', linkSource: 'https://github.com/Nelitaa/The-Meal-DB',
   },
   {
-    name: 'Employment and Entrepreneurship Fair 2022', description: 'This repository showcases the responsive design for the Employment and Entrepreneurship Fair 2022 website, following Behance design guidelines. You can easily find all comprehensive information regarding the event, including the date, location, speakers, sponsors, and main programs such as lectures, job matching, roundtables, stands and exhibitions', image: 'https://drive.google.com/uc?export=download&id=', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Employment-and-Entrepreneurship-Fair-2022/', linkSource: 'https://github.com/Nelitaa/Employment-and-Entrepreneurship-Fair-2022',
+    name: 'Employment and Entrepreneurship Fair 2022', description: 'This repository showcases the responsive design for the Employment and Entrepreneurship Fair 2022 website, following Behance design guidelines. You can easily find all comprehensive information regarding the event, including the date, location, speakers, sponsors, and main programs such as lectures, job matching, roundtables, stands and exhibitions', image: 'https://drive.google.com/uc?export=download&id=1nqh4M66lETned_OqD2lhfXtNsXJpLeCY', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Employment-and-Entrepreneurship-Fair-2022/', linkSource: 'https://github.com/Nelitaa/Employment-and-Entrepreneurship-Fair-2022',
   },
 ];
 
@@ -70,12 +70,11 @@ for (let i = 0; i < projects.length; i += 1) {
   document.getElementById('projects').appendChild(card);
 
   const cardImage = document.createElement('img');
-  cardImage.className = 'projects-image';
   cardImage.src = projects[i].image;
   card.appendChild(cardImage);
 
   const cardContent = document.createElement('div');
-  cardContent.className = 'boxblue';
+  cardContent.className = 'card-content';
   card.appendChild(cardContent);
 
   const cardTitle = document.createElement('h3');
@@ -83,20 +82,18 @@ for (let i = 0; i < projects.length; i += 1) {
   cardContent.appendChild(cardTitle);
 
   const cardTechnologies = document.createElement('ul');
-  cardTechnologies.className = 'lenguages';
   cardContent.appendChild(cardTechnologies);
 
   for (let j = 0; j < projects[i].technologies.length; j += 1) {
     const cardTechnology = document.createElement('li');
     cardTechnology.textContent = projects[i].technologies[j];
-    cardTechnology.className = 'boxlenguages';
     cardTechnologies.appendChild(cardTechnology);
   }
 
   const cardButton = document.createElement('button');
   cardButton.type = 'submit';
   cardButton.textContent = 'See this project';
-  cardButton.className = 'button-see-this-project-1';
+  cardButton.className = 'main-button';
   cardContent.appendChild(cardButton);
 
   const iconCardButton = document.createElement('img');
