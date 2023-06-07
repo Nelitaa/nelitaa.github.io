@@ -67,6 +67,7 @@ document.getElementById('projects').appendChild(titleProjects);
 for (let i = 0; i < projects.length; i += 1) {
   const card = document.createElement('div');
   card.className = 'card';
+  card.id = `card-${i + 1}`;
   document.getElementById('projects').appendChild(card);
 
   const cardImage = document.createElement('img');
@@ -101,57 +102,14 @@ for (let i = 0; i < projects.length; i += 1) {
   cardButton.appendChild(iconCardButton);
 }
 
+const projectsBackground1 = document.createElement('div');
+projectsBackground1.className = 'projects-background-1';
+document.getElementById('projects').appendChild(projectsBackground1);
 
+const projectsBackground2 = document.createElement('div');
+projectsBackground2.className = 'projects-background-2';
+document.getElementById('projects').appendChild(projectsBackground2);
 
-for (let i = 0; i < projects.length; i += 1) {
-  const sectionBox = document.createElement('section');
-  if (i === 0) {
-    sectionBox.className = 'projects-section';
-  }
-  if (i === 1) {
-    sectionBox.className = 'projects-section-2';
-  }
-  if (i === 2) {
-    sectionBox.className = 'projects-section-3';
-  }
-  if (i === 3) {
-    sectionBox.className = 'projects-section-4';
-  }
-  if (i === 4) {
-    sectionBox.className = 'projects-section-5';
-  }
-  if (i === 5) {
-    sectionBox.className = 'projects-section-6';
-  }
-  document.getElementById('projec').appendChild(sectionBox);
-
-  if (i === 0) {
-    const imgProject1 = document.createElement('img');
-    imgProject1.className = 'image-project11';
-    imgProject1.src = 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-';
-    divProjectImage.appendChild(imgProject1);
-  }
-
-  const divBackground1 = document.createElement('div');
-  divBackground1.className = 'background-1';
-  document.getElementById('portfolio').appendChild(divBackground1);
-
-  const divBackground2 = document.createElement('div');
-  divBackground2.className = 'background-2';
-  document.getElementById('portfolio').appendChild(divBackground2);
-
-  const divBackground3 = document.createElement('div');
-  divBackground3.className = 'background-3';
-  document.getElementById('portfolio').appendChild(divBackground3);
-
-  const divBackground4 = document.createElement('div');
-  divBackground4.className = 'background-4';
-  document.getElementById('portfolio').appendChild(divBackground4);
-
-  const divBackground5 = document.createElement('div');
-  divBackground5.className = 'background-5';
-  document.getElementById('portfolio').appendChild(divBackground5);
-}
 
 function createProject(project) {
   const divXButton = document.createElement('div');
