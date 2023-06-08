@@ -775,8 +775,8 @@ footer {
   /* Projects section */
   #projects {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 70vh 24vh 48vh 24vh;
+    grid-template-columns: 33.32vw 16.66vw 4.165vw 4.165vw 8.33vw 33.32vw;
+    grid-template-rows: auto auto auto auto auto;
     margin-top: 16vh;
     margin-bottom: 16vh;
   }
@@ -796,62 +796,99 @@ footer {
   }
 
   #card-1 {
-    grid-area: 1/2/2/5;
+    grid-area: 1/2/2/7;
   }
 
   #card-2 {
     grid-area: 2/1/3/2;
+    justify-content: end;
   }
 
   .projects-background-1 {
-    grid-area: 2/2/3/4;
-    background-image: url(https://drive.google.com/uc?export=download&id=);
+    grid-area: 2/2/3/6;
+    background-image: url(https://drive.google.com/uc?export=download&id=1vq8Hx4_m1epzl2px5ncXAF3eTtbwwjLd);
+    background-repeat: none;
+    background-size: contain;
   }
 
   #card-3  {
-    grid-area: 2/4/3/5;
+    grid-area: 2/6/3/7;
   }
 
   #card-4 {
-    grid-area: 3/1/4/3;
+    grid-area: 3/1/5/4;
   }
 
   #card-5 {
-    grid-area:  3/3/4/5;
+    grid-area: 3/4/4/5;
   }
 
   .projects-background-2 {
-    grid-area: 4/1/5/3;
-    background-image: url(https://drive.google.com/uc?export=download&id=);
+    grid-area: 4/3/5/4;
+    background-image: url(https://drive.google.com/uc?export=download&id=18uN6zKjeyeidUylBHXKYwCBSE6uFIfCa);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .projects-background-3 {
+    grid-area: 4/4/5/5;
+    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .projects-background-4 {
+    grid-area: 5/1/6/2;
+    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .projects-background-5 {
+    grid-area: 5/2/6/3;
+    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   #card-6 {
-    grid-area: 4/3/5/5;
+    grid-area: 5/3/6/5;
   }
 
   .card-content {
     display: none;
   }
-  
-  .title-projects-container,
-  #card-1 img, 
-  #card-2 img, 
-  #card-3 img, 
-  #card-4 img, 
-  #card-5 img, 
-  #card-6 img {
+
+  .title-projects-container {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  #card-1 img:hover .card-content,
-  #card-2 img:hover .card-content, 
-  #card-3 img:hover .card-content, 
-  #card-4 img:hover .card-content, 
-  #card-5 img:hover .card-content, 
-  #card-6 img:hover .card-content {
-    display: flex;
+  #card-3 img {
+    height: 95%;
+    width: 100%;
+    object-fit:contain;
+  }
+
+  #card-1 img,
+  #card-2 img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+  }
+
+  #card-5 img,
+  #card-4 img,
+  .title-projects-container,
+  #card-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
   }
 
 /* 

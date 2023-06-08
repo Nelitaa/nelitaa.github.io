@@ -47,9 +47,6 @@ const projects = [
     name: 'Recipe App', description: 'The Recipe app tracks your recipes, ingredients, and inventory. You can save ingredients, create recipes, and generate a shopping list based on what you have and need. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.', image: 'https://drive.google.com/uc?export=download&id=1G2wQZDLDVKNMEBO0Z_RJtiiLjKmHzFau', technologies: ['Ruby on Rails', 'PostgreSQL'], linkDemo: 'Coming Soon...', linkSource: 'https://github.com/Nelitaa/Recipe-App',
   },
   {
-    name: 'Math Magicians', description: 'Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.', image: 'https://drive.google.com/uc?export=download&id=1Y3qesIAGy5otMVEQq4RlSJFlZdr4HKy0', technologies: ['React'], linkDemo: 'https://math-magicians-zjk7.onrender.com/', linkSource: 'https://github.com/Nelitaa/Math-magicians',
-  },
-  {
     name: 'I Love Food', description: 'This is a mobile web application that uses an external API to provide a seamless browsing experience for users exploring a variety of recipes from around the world, curated and organized by country. Users can track the popularity of each recipe with detailed view counts per recipe and by country and globally.', image: 'https://drive.google.com/uc?export=download&id=1K7WkVclQld9LM24YHVfefPttob08--4-', technologies: ['React', 'Redux'], linkDemo: 'https://i-love-food.onrender.com/', linkSource: 'https://github.com/Nelitaa/I-love-food',
   },
   {
@@ -57,6 +54,9 @@ const projects = [
   },
   {
     name: 'Employment and Entrepreneurship Fair 2022', description: 'This repository showcases the responsive design for the Employment and Entrepreneurship Fair 2022 website, following Behance design guidelines. You can easily find all comprehensive information regarding the event, including the date, location, speakers, sponsors, and main programs such as lectures, job matching, roundtables, stands and exhibitions', image: 'https://drive.google.com/uc?export=download&id=1uMcsZWyVbRcpJm7ePgK0-e8G5RpW31BY', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Employment-and-Entrepreneurship-Fair-2022/', linkSource: 'https://github.com/Nelitaa/Employment-and-Entrepreneurship-Fair-2022',
+  },
+  {
+    name: 'Math Magicians', description: 'Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.', image: 'https://drive.google.com/uc?export=download&id=1Y3qesIAGy5otMVEQq4RlSJFlZdr4HKy0', technologies: ['React'], linkDemo: 'https://math-magicians-zjk7.onrender.com/', linkSource: 'https://github.com/Nelitaa/Math-magicians',
   },
 ];
 
@@ -113,6 +113,18 @@ document.getElementById('projects').appendChild(projectsBackground1);
 const projectsBackground2 = document.createElement('div');
 projectsBackground2.className = 'projects-background-2';
 document.getElementById('projects').appendChild(projectsBackground2);
+
+const projectsBackground3 = document.createElement('div');
+projectsBackground3.className = 'projects-background-3';
+document.getElementById('projects').appendChild(projectsBackground3);
+
+const projectsBackground4 = document.createElement('div');
+projectsBackground4.className = 'projects-background-4';
+document.getElementById('projects').appendChild(projectsBackground4);
+
+const projectsBackground5 = document.createElement('div');
+projectsBackground5.className = 'projects-background-5';
+document.getElementById('projects').appendChild(projectsBackground5);
 
 
 function createProject(project) {
