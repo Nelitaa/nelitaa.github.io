@@ -60,9 +60,13 @@ const projects = [
   },
 ];
 
+const titleProjectsContainer = document.createElement('div');
+titleProjectsContainer.className = 'title-projects-container';
+document.getElementById('projects').appendChild(titleProjectsContainer);
+
 const titleProjects = document.createElement('h2');
 titleProjects.textContent = 'Projects';
-document.getElementById('projects').appendChild(titleProjects);
+titleProjectsContainer.appendChild(titleProjects);
 
 for (let i = 0; i < projects.length; i += 1) {
   const card = document.createElement('div');

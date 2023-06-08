@@ -776,11 +776,23 @@ footer {
   #projects {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 3fr 1fr 2fr 1fr;
+    grid-template-rows: 70vh 24vh 48vh 24vh;
+    margin-top: 16vh;
+    margin-bottom: 16vh;
+  }
+
+  .title-projects-container {
+    grid-area: 1/1/2/2;
+    background-image: url(https://drive.google.com/uc?export=download&id=1uLuo54aFlwvRvTVLlG3_hK_wrxjrORUv);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: 100% 0;
   }
 
   #projects h2 {
-    grid-area: 1/1/2/2;
+    margin-top: 16vh;
+    transform: rotate(-90deg);
+    padding: 0;
   }
 
   #card-1 {
@@ -817,13 +829,29 @@ footer {
     grid-area: 4/3/5/5;
   }
 
+  .card-content {
+    display: none;
+  }
+  
+  .title-projects-container,
   #card-1 img, 
   #card-2 img, 
   #card-3 img, 
   #card-4 img, 
   #card-5 img, 
   #card-6 img {
-    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #card-1 img:hover .card-content,
+  #card-2 img:hover .card-content, 
+  #card-3 img:hover .card-content, 
+  #card-4 img:hover .card-content, 
+  #card-5 img:hover .card-content, 
+  #card-6 img:hover .card-content {
+    display: flex;
   }
 
 /* 
@@ -834,14 +862,6 @@ footer {
     margin: 0;
     padding: 0;
     background-size: 30%;
-  }
-
-  .rotate-projects {
-    transform: rotate(270deg);
-  }
-
-  img.image-project1 {
-    display: none;
   }
 
   .projects-image-2 {
@@ -861,16 +881,6 @@ footer {
     flex-direction: column;
     justify-content: left;
     width: 70%;
-  }
-
-  .projects-image-5 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .projects-image-6 {
-    display: flex;
-    flex-direction: column;
   }
 
   section.boxblue-1 {
