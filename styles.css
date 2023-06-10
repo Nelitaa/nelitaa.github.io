@@ -775,8 +775,8 @@ footer {
   /* Projects section */
   #projects {
     display: grid;
-    grid-template-columns: 33.32vw 16.66vw 4.165vw 4.165vw 8.33vw 33.32vw;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 31vw 12.3vw 12.66vw 12.66vw 31vw;
+    grid-template-rows: 70vh auto auto auto auto;
     margin-top: 16vh;
     margin-bottom: 16vh;
   }
@@ -807,7 +807,7 @@ footer {
   .projects-background-1 {
     grid-area: 2/2/3/6;
     background-image: url(https://drive.google.com/uc?export=download&id=1vq8Hx4_m1epzl2px5ncXAF3eTtbwwjLd);
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: contain;
   }
 
@@ -841,7 +841,7 @@ footer {
 
   .projects-background-4 {
     grid-area: 5/1/6/2;
-    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-image: url(https://drive.google.com/uc?export=download&id=10gJydnP9nnqOWZ59Op_qj9_JKChsPYLF);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -849,7 +849,7 @@ footer {
 
   .projects-background-5 {
     grid-area: 5/2/6/3;
-    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-image: url(https://drive.google.com/uc?export=download&id=1O_DYyLEPrwr2n0pyRUFIJ_sFpVZofhLd);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -863,23 +863,22 @@ footer {
     display: none;
   }
 
-  .title-projects-container {
+  #card-3 img {
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+  }
+  #card-1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  #card-3 img {
-    height: 95%;
-    width: 100%;
-    object-fit:contain;
-  }
-
-  #card-1 img,
   #card-2 img {
+    margin-top: 9%;
     width: 100%;
-    height: 90%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
   }
 
   #card-5 img,
