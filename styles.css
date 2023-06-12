@@ -640,6 +640,7 @@ footer {
     grid-template-columns: 31vw 12vw 13vw 13vw 31vw;
     grid-template-rows: 70vh auto 35vh 20vh auto;
     margin-top: 16vh;
+    scroll-margin-top: 16vh;
   }
 
   .title-projects-container {
