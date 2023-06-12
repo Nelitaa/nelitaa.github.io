@@ -215,7 +215,7 @@ header {
 #projects .main-button {
   justify-content: left;
   align-items: center;
-  width: 178px;
+  width: 190px;
   padding: 3%;
   font-size: 16px;
   border: 1px solid #fff;
@@ -546,6 +546,7 @@ footer {
   #presentation button,
   #about button {
     align-self: flex-start;
+    width: 212px;
   }
 
   /* Header */
@@ -633,6 +634,170 @@ footer {
     background-size: 17%;
   }
 
+  /* Projects section */
+  #projects {
+    display: grid;
+    grid-template-columns: 31vw 12vw 13vw 13vw 31vw;
+    grid-template-rows: 70vh auto 35vh 20vh auto;
+    margin-top: 16vh;
+  }
+
+  .title-projects-container {
+    grid-area: 1/1/2/2;
+    background-image: url(https://drive.google.com/uc?export=download&id=1uLuo54aFlwvRvTVLlG3_hK_wrxjrORUv);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: 100% 0;
+  }
+
+  #projects h2 {
+    margin-top: 16vh;
+    transform: rotate(-90deg);
+    padding: 0;
+  }
+
+  #card-1 {
+    grid-area: 1/2/2/7;
+  }
+
+  #card-2 {
+    grid-area: 2/1/3/2;
+    justify-content: end;
+    margin-top: 9%;
+  }
+
+  .projects-background-1 {
+    grid-area: 2/2/3/6;
+    background-image: url(https://drive.google.com/uc?export=download&id=1vq8Hx4_m1epzl2px5ncXAF3eTtbwwjLd);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #card-3  {
+    grid-area: 2/5/3/6;
+  }
+
+  #card-4 {
+    grid-area: 3/1/5/4;
+  }
+
+  #card-5 {
+    grid-area: 3/5/4/6;
+  }
+
+  .projects-background-2 {
+    grid-area: 4/4/5/5;
+    background-image: url(https://drive.google.com/uc?export=download&id=18uN6zKjeyeidUylBHXKYwCBSE6uFIfCa);
+    background-repeat: no-repeat;
+    background-size: 76%;
+    background-position: 0 100%;
+  }
+
+  .projects-background-3 {
+    grid-area: 4/5/5/6;
+    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 65%;
+  }
+
+  .projects-background-4 {
+    grid-area: 5/1/6/2;
+    background-image: url(https://drive.google.com/uc?export=download&id=10gJydnP9nnqOWZ59Op_qj9_JKChsPYLF);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 40%;
+  }
+
+  .projects-background-5 {
+    grid-area: 5/3/6/4;
+    background-image: url(https://drive.google.com/uc?export=download&id=1O_DYyLEPrwr2n0pyRUFIJ_sFpVZofhLd);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 43%;
+  }
+
+  #card-6 {
+    grid-area: 5/4/6/6;
+    width: 77%;
+    height: 70%;
+  }
+
+  #card-5 img,
+  #card-6 img,
+  #card-4 img,
+  #card-1 img {
+    object-fit: cover;
+  }
+
+  #card-3 img,
+  #card-2 img,
+  .title-projects-container {
+    object-fit: contain;
+  }
+
+  .card {
+    position: relative;
+  }
+  
+  .card img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .card-content {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    animation-duration: 0.5s;
+    box-sizing: border-box;
+  }
+  
+  .card:hover .card-content {
+    display: block;
+  }
+
+  #card-6 .card-content,
+  .card:nth-child(even) .card-content {
+    animation-name: slideInRight;
+  }
+  
+  .card:nth-child(odd) .card-content {
+    animation-name: slideInLeft;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  #projects .main-button {
+    width: 212px;
+    padding: 2%;
+  }
+
+  #projects .main-button img {
+    width: auto;
+  }
+
   /* About section*/
   #about {
     flex-direction: row-reverse;
@@ -644,8 +809,12 @@ footer {
 
   .blocks {
     display: grid;
-    grid-template-columns: 27vh 27vh ;
-    grid-template-rows: 27vh 27vh ;
+    grid-template-columns: 32vh 32vh ;
+    grid-template-rows: 32vh 32vh ;
+  }
+
+  .blocks ul {
+    margin-top: 5%;
   }
 
   .languages,
@@ -764,132 +933,14 @@ footer {
   .icons-container {
     align-items: center;
     padding: 0;
-    width: 30%;
+    width: 20%;
     margin-right: 10%;
   }
 
   .icons-container a img {
     height: 20px;
   }
-
-  /* Projects section */
-  #projects {
-    display: grid;
-    grid-template-columns: 31vw 12.30vw 12.66vw 12.30vw 31.66vw;
-    grid-template-rows: 70vh auto 37vh auto auto;
-    margin-top: 16vh;
-    margin-bottom: 16vh;
-  }
-
-  .title-projects-container {
-    grid-area: 1/1/2/2;
-    background-image: url(https://drive.google.com/uc?export=download&id=1uLuo54aFlwvRvTVLlG3_hK_wrxjrORUv);
-    background-repeat: no-repeat;
-    background-size: 25%;
-    background-position: 100% 0;
-  }
-
-  #projects h2 {
-    margin-top: 16vh;
-    transform: rotate(-90deg);
-    padding: 0;
-  }
-
-  #card-1 {
-    grid-area: 1/2/2/7;
-  }
-
-  #card-2 {
-    grid-area: 2/1/3/2;
-    justify-content: end;
-  }
-
-  .projects-background-1 {
-    grid-area: 2/2/3/6;
-    background-image: url(https://drive.google.com/uc?export=download&id=1vq8Hx4_m1epzl2px5ncXAF3eTtbwwjLd);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  #card-3  {
-    grid-area: 2/5/3/6;
-  }
-
-  #card-4 {
-    grid-area: 3/1/5/4;
-  }
-
-  #card-5 {
-    grid-area: 3/5/4/6;
-  }
-
-  .projects-background-2 {
-    grid-area: 4/4/5/5;
-    background-image: url(https://drive.google.com/uc?export=download&id=18uN6zKjeyeidUylBHXKYwCBSE6uFIfCa);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .projects-background-3 {
-    grid-area: 4/5/5/6;
-    background-image: url(https://drive.google.com/uc?export=download&id=1yDjaLubR8A8v5957VhaazJ1BPTkMWcKM);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .projects-background-4 {
-    grid-area: 5/1/6/2;
-    background-image: url(https://drive.google.com/uc?export=download&id=10gJydnP9nnqOWZ59Op_qj9_JKChsPYLF);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .projects-background-5 {
-    grid-area: 5/2/6/3;
-    background-image: url(https://drive.google.com/uc?export=download&id=1O_DYyLEPrwr2n0pyRUFIJ_sFpVZofhLd);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  #card-6 {
-    grid-area: 5/3/6/5;
-  }
-
-  .card-content {
-    display: none;
-  }
-
-  #card-3 img {
-    height: 100%;
-    width: 100%;
-    object-fit:contain;
-  }
-  #card-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  #card-2 img {
-    margin-top: 9%;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  #card-5 img,
-  #card-4 img,
-  .title-projects-container,
-  #card-6 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
+  
 /* 
   section.presentation-project (este era como el background de la seccion de proyectos){
     background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
