@@ -126,200 +126,158 @@ const projectsBackground5 = document.createElement('div');
 projectsBackground5.className = 'projects-background-5';
 document.getElementById('projects').appendChild(projectsBackground5);
 
+/* Details popup window projects section */
+const createPopupProject = (project) => {
+  const projectsPopupContainer = document.createElement('div');
+  projectsPopupContainer.id = 'projects-popup-container';
+  document.getElementById('projects').appendChild(projectsPopupContainer);
 
-function createProject(project) {
-  const divXButton = document.createElement('div');
-  divXButton.id = 'projects-popup-divXButton';
-  divXButton.className = 'projects-popup-divXButton-container';
-  document.getElementById('projects-popup').appendChild(divXButton);
+  const closeIconContainer = document.createElement('div');
+  closeIconContainer.className = 'close-icon-container';
+  projectsPopupContainer.appendChild(closeIconContainer);
 
-  const xButton = document.createElement('img');
-  xButton.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
-  xButton.className = 'projects-popup-divXButton';
-  divXButton.appendChild(xButton);
+  const closeIcon = document.createElement('img');
+  closeIcon.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
+  closeIconContainer.appendChild(closeIcon);
 
-  const h2 = document.createElement('h2');
-  h2.textContent = project.name;
-  h2.className = 'projects-popup-title';
-  document.getElementById('projects-popup').appendChild(h2);
+  const projectPopupTitle = document.createElement('h3');
+  projectPopupTitle.textContent = project.name;
+  projectsPopupContainer.appendChild(projectPopupTitle);
 
-  const ul = document.createElement('ul');
-  ul.id = 'lenguagesPopup';
-  document.getElementById('projects-popup').appendChild(ul);
+  const projectPopupTechnologies = document.createElement('ul');
+  projectsPopupContainer.appendChild(projectPopupTechnologies);
 
-  const li = document.createElement('li');
-  li.textContent = project.technologies['0'];
-  li.className = 'boxlenguages-pop';
-  ul.appendChild(li);
-
-  const lisecond = document.createElement('li');
-  lisecond.textContent = project.technologies['1'];
-  lisecond.className = 'boxlenguages-pop';
-  ul.appendChild(lisecond);
-
-  const listhird = document.createElement('li');
-  listhird.textContent = project.technologies['2'];
-  listhird.className = 'boxlenguages-pop';
-  ul.appendChild(listhird);
-
-  const img1 = document.createElement('img');
-  img1.src = project.image;
-  img1.className = 'projects-popup-img1';
-  document.getElementById('projects-popup').appendChild(img1);
-
-  const divImg = document.createElement('div');
-  divImg.id = 'projects-popup-img';
-  divImg.className = 'projects-popup-img-container';
-  document.getElementById('projects-popup').appendChild(divImg);
-
-  const img2 = document.createElement('img');
-  img2.src = project.imageSecundary;
-  img2.className = 'projects-popup-img';
-  divImg.appendChild(img2);
-
-  const img3 = document.createElement('img');
-  img3.src = project.imageSecundary;
-  img3.className = 'projects-popup-img';
-  divImg.appendChild(img3);
-
-  const img4 = document.createElement('img');
-  img4.src = project.imageSecundary;
-  img4.className = 'projects-popup-img';
-  divImg.appendChild(img4);
-
-  const img5 = document.createElement('img');
-  img5.src = project.imageSecundary;
-  img5.className = 'projects-popup-img';
-  divImg.appendChild(img5);
-
-  const p = document.createElement('p');
-  p.textContent = project.description;
-  p.className = 'projects-popup-paragraph';
-  document.getElementById('projects-popup').appendChild(p);
-
-  const divButton = document.createElement('div');
-  divButton.id = 'projects-popup-button';
-  divButton.className = 'projects-popup-button-container';
-  document.getElementById('projects-popup').appendChild(divButton);
-
-  const buttonDemo = document.createElement('button');
-  buttonDemo.type = 'submit';
-  buttonDemo.textContent = 'See live';
-  buttonDemo.className = 'projects-popup-button';
-  divButton.appendChild(buttonDemo);
-
-  const iconButtonDemo = document.createElement('img');
-  iconButtonDemo.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
-  iconButtonDemo.className = 'projects-popup-button-icon';
-  buttonDemo.appendChild(iconButtonDemo);
-
-  const buttonSource = document.createElement('button');
-  buttonSource.type = 'submit';
-  buttonSource.textContent = 'See source';
-  buttonSource.className = 'projects-popup-button';
-  divButton.appendChild(buttonSource);
-
-  const iconButtonSource = document.createElement('img');
-  iconButtonSource.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
-  iconButtonSource.className = 'projects-popup-button-icon';
-  buttonSource.appendChild(iconButtonSource);
-}
-
-for (let i = 0; i < projects.length; i += 1) {
-  if (i === 0) {
-    const open = document.querySelector('.button-see-this-project-1');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
+  for (let j = 0; j < project.technologies.length; j += 1) {
+    const projectPopupTechnology = document.createElement('li');
+    projectPopupTechnology.textContent = project.technologies[j];
+    projectPopupTechnologies.appendChild(projectPopupTechnology);
   }
-  if (i === 1) {
-    const open = document.querySelector('.button-see-this-project-2');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
-  }
-  if (i === 2) {
-    const open = document.querySelector('.button-see-this-project-3');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
-  }
-  if (i === 3) {
-    const open = document.querySelector('.button-see-this-project-4');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
-  }
-  if (i === 4) {
-    const open = document.querySelector('.button-see-this-project-5');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
-  }
-  if (i === 5) {
-    const open = document.querySelector('.button-see-this-project-6');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
-  }
-}
+
+  const projectsPopupImage = document.createElement('img');
+  projectsPopupImage.src = project.image;
+  projectsPopupContainer.appendChild(projectsPopupImage);
+
+  const projectsPopupDescription = document.createElement('p');
+  projectsPopupDescription.textContent = project.description;
+  projectsPopupContainer.appendChild(projectsPopupDescription);
+
+  const demoButton = document.createElement('button');
+  demoButton.type = 'submit';
+  demoButton.textContent = 'See live';
+  demoButton.className = 'secondary-button';
+  projectsPopupContainer.appendChild(demoButton);
+
+  const iconDemoButton = document.createElement('img');
+  iconDemoButton.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
+  demoButton.appendChild(iconDemoButton);
+
+  const sourceButton = document.createElement('button');
+  sourceButton.type = 'submit';
+  sourceButton.textContent = 'See source';
+  sourceButton.className = 'secondary-button';
+  projectsPopupContainer.appendChild(sourceButton);
+
+  const iconSourceButton = document.createElement('img');
+  iconSourceButton.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
+  sourceButton.appendChild(iconSourceButton);
+};
+
+
+// for (let i = 0; i < projects.length; i += 1) {
+//   if (i === 0) {
+//     const open = document.querySelector('.button-see-this-project-1');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+//   if (i === 1) {
+//     const open = document.querySelector('.button-see-this-project-2');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+//   if (i === 2) {
+//     const open = document.querySelector('.button-see-this-project-3');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+//   if (i === 3) {
+//     const open = document.querySelector('.button-see-this-project-4');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+//   if (i === 4) {
+//     const open = document.querySelector('.button-see-this-project-5');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+//   if (i === 5) {
+//     const open = document.querySelector('.button-see-this-project-6');
+//     open.addEventListener('click', () => {
+//       const div = document.createElement('div');
+//       div.id = 'projects-popup';
+//       div.className = 'projects-popup-container';
+//       document.body.append(div);
+//       document.body.classList.add('stop-scroll');
+//       createProject(projects[i]);
+//       const close = document.querySelector('.projects-popup-divXButton');
+//       close.addEventListener('click', () => {
+//         document.body.classList.remove('stop-scroll');
+//         document.body.removeChild(div);
+//       });
+//     });
+//   }
+// }

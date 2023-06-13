@@ -395,8 +395,7 @@ footer {
   height: 50%;
   padding: 10% 20% 10% 20%;
 }
-
-/* 
+/* Details popup window */
 .projects-popup-container {
   display: flex;
   flex-direction: column;
@@ -503,7 +502,7 @@ footer {
 .stop-scroll {
   height: 100%;
   overflow: scroll;
-} */
+}
 
 @media only screen and (min-width: 768px) {
   html, 
@@ -942,7 +941,7 @@ footer {
     height: 20px;
   }
   
-/* 
+/* Details popup window */
   section.presentation-project (este era como el background de la seccion de proyectos){
     background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
     background-repeat: no-repeat;
@@ -1020,5 +1019,5 @@ footer {
   .projects-popup-container {
     overflow: scroll;
     height: 90vh !important;
-  } */
+  } 
 }
