@@ -99,185 +99,103 @@ for (let i = 0; i < projects.length; i += 1) {
   cardButton.type = 'submit';
   cardButton.textContent = 'See this project';
   cardButton.className = 'main-button';
+  cardButton.id = i;
   cardContent.appendChild(cardButton);
 
   const iconCardButton = document.createElement('img');
   iconCardButton.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
   cardButton.appendChild(iconCardButton);
+
+  const projectsBackground1 = document.createElement('div');
+  projectsBackground1.className = 'projects-background-1';
+  document.getElementById('projects').appendChild(projectsBackground1);
+
+  const projectsBackground2 = document.createElement('div');
+  projectsBackground2.className = 'projects-background-2';
+  document.getElementById('projects').appendChild(projectsBackground2);
+
+  const projectsBackground3 = document.createElement('div');
+  projectsBackground3.className = 'projects-background-3';
+  document.getElementById('projects').appendChild(projectsBackground3);
+
+  const projectsBackground4 = document.createElement('div');
+  projectsBackground4.className = 'projects-background-4';
+  document.getElementById('projects').appendChild(projectsBackground4);
+
+  const projectsBackground5 = document.createElement('div');
+  projectsBackground5.className = 'projects-background-5';
+  document.getElementById('projects').appendChild(projectsBackground5);
+
+  /* Details popup window projects section */
+  const createPopupProject = (project) => {
+    const projectsPopupContainer = document.createElement('div');
+    projectsPopupContainer.id = 'projects-popup-container';
+    document.getElementById('projects').appendChild(projectsPopupContainer);
+
+    const closeIconContainer = document.createElement('div');
+    closeIconContainer.className = 'close-icon-container';
+    projectsPopupContainer.appendChild(closeIconContainer);
+
+    const closeIcon = document.createElement('img');
+    closeIcon.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
+    closeIconContainer.appendChild(closeIcon);
+
+    closeIcon.addEventListener('click', () => {
+      projectsPopupContainer.remove();
+    });
+
+    const projectPopupTitle = document.createElement('h3');
+    projectPopupTitle.textContent = project.name;
+    projectsPopupContainer.appendChild(projectPopupTitle);
+
+    const projectPopupTechnologies = document.createElement('ul');
+    projectsPopupContainer.appendChild(projectPopupTechnologies);
+
+    for (let j = 0; j < project.technologies.length; j += 1) {
+      const projectPopupTechnology = document.createElement('li');
+      projectPopupTechnology.textContent = project.technologies[j];
+      projectPopupTechnologies.appendChild(projectPopupTechnology);
+    }
+
+    const projectsPopupImage = document.createElement('img');
+    projectsPopupImage.src = project.image;
+    projectsPopupContainer.appendChild(projectsPopupImage);
+
+    const projectsPopupDescription = document.createElement('p');
+    projectsPopupDescription.textContent = project.description;
+    projectsPopupContainer.appendChild(projectsPopupDescription);
+
+    const demoButton = document.createElement('button');
+    demoButton.type = 'submit';
+    demoButton.textContent = 'See live';
+    demoButton.className = 'secondary-button';
+    projectsPopupContainer.appendChild(demoButton);
+
+    demoButton.addEventListener('click', () => {
+      window.open(project.linkDemo, '_blank');
+    });
+
+    const iconDemoButton = document.createElement('img');
+    iconDemoButton.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
+    demoButton.appendChild(iconDemoButton);
+
+    const sourceButton = document.createElement('button');
+    sourceButton.type = 'submit';
+    sourceButton.textContent = 'See source';
+    sourceButton.className = 'secondary-button';
+    projectsPopupContainer.appendChild(sourceButton);
+
+    sourceButton.addEventListener('click', () => {
+      window.open(project.linkSource, '_blank');
+    });
+
+    const iconSourceButton = document.createElement('img');
+    iconSourceButton.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
+    sourceButton.appendChild(iconSourceButton);
+  };
+
+  cardButton.addEventListener('click', () => {
+    const project = projects[cardButton.id];
+    createPopupProject(project);
+  });
 }
-
-const projectsBackground1 = document.createElement('div');
-projectsBackground1.className = 'projects-background-1';
-document.getElementById('projects').appendChild(projectsBackground1);
-
-const projectsBackground2 = document.createElement('div');
-projectsBackground2.className = 'projects-background-2';
-document.getElementById('projects').appendChild(projectsBackground2);
-
-const projectsBackground3 = document.createElement('div');
-projectsBackground3.className = 'projects-background-3';
-document.getElementById('projects').appendChild(projectsBackground3);
-
-const projectsBackground4 = document.createElement('div');
-projectsBackground4.className = 'projects-background-4';
-document.getElementById('projects').appendChild(projectsBackground4);
-
-const projectsBackground5 = document.createElement('div');
-projectsBackground5.className = 'projects-background-5';
-document.getElementById('projects').appendChild(projectsBackground5);
-
-/* Details popup window projects section */
-const createPopupProject = (project) => {
-  const projectsPopupContainer = document.createElement('div');
-  projectsPopupContainer.id = 'projects-popup-container';
-  document.getElementById('projects').appendChild(projectsPopupContainer);
-
-  const closeIconContainer = document.createElement('div');
-  closeIconContainer.className = 'close-icon-container';
-  projectsPopupContainer.appendChild(closeIconContainer);
-
-  const closeIcon = document.createElement('img');
-  closeIcon.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
-  closeIconContainer.appendChild(closeIcon);
-
-  const projectPopupTitle = document.createElement('h3');
-  projectPopupTitle.textContent = project.name;
-  projectsPopupContainer.appendChild(projectPopupTitle);
-
-  const projectPopupTechnologies = document.createElement('ul');
-  projectsPopupContainer.appendChild(projectPopupTechnologies);
-
-  for (let j = 0; j < project.technologies.length; j += 1) {
-    const projectPopupTechnology = document.createElement('li');
-    projectPopupTechnology.textContent = project.technologies[j];
-    projectPopupTechnologies.appendChild(projectPopupTechnology);
-  }
-
-  const projectsPopupImage = document.createElement('img');
-  projectsPopupImage.src = project.image;
-  projectsPopupContainer.appendChild(projectsPopupImage);
-
-  const projectsPopupDescription = document.createElement('p');
-  projectsPopupDescription.textContent = project.description;
-  projectsPopupContainer.appendChild(projectsPopupDescription);
-
-  const demoButton = document.createElement('button');
-  demoButton.type = 'submit';
-  demoButton.textContent = 'See live';
-  demoButton.className = 'secondary-button';
-  projectsPopupContainer.appendChild(demoButton);
-
-  const iconDemoButton = document.createElement('img');
-  iconDemoButton.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
-  demoButton.appendChild(iconDemoButton);
-
-  const sourceButton = document.createElement('button');
-  sourceButton.type = 'submit';
-  sourceButton.textContent = 'See source';
-  sourceButton.className = 'secondary-button';
-  projectsPopupContainer.appendChild(sourceButton);
-
-  const iconSourceButton = document.createElement('img');
-  iconSourceButton.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
-  sourceButton.appendChild(iconSourceButton);
-};
-
-
-// for (let i = 0; i < projects.length; i += 1) {
-//   if (i === 0) {
-//     const open = document.querySelector('.button-see-this-project-1');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-//   if (i === 1) {
-//     const open = document.querySelector('.button-see-this-project-2');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-//   if (i === 2) {
-//     const open = document.querySelector('.button-see-this-project-3');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-//   if (i === 3) {
-//     const open = document.querySelector('.button-see-this-project-4');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-//   if (i === 4) {
-//     const open = document.querySelector('.button-see-this-project-5');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-//   if (i === 5) {
-//     const open = document.querySelector('.button-see-this-project-6');
-//     open.addEventListener('click', () => {
-//       const div = document.createElement('div');
-//       div.id = 'projects-popup';
-//       div.className = 'projects-popup-container';
-//       document.body.append(div);
-//       document.body.classList.add('stop-scroll');
-//       createProject(projects[i]);
-//       const close = document.querySelector('.projects-popup-divXButton');
-//       close.addEventListener('click', () => {
-//         document.body.classList.remove('stop-scroll');
-//         document.body.removeChild(div);
-//       });
-//     });
-//   }
-// }
