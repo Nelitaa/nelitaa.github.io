@@ -23,6 +23,7 @@ li > a {
   transition: all 0.5s ease-out;
 }
 
+.projects-popup-buttons-secondary,
 .resume-link-desktop,
 .contact-background-right,
 .contact-background-left,
@@ -284,6 +285,11 @@ header {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+}
+
+.projects-popup-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .secondary-button {
@@ -784,6 +790,88 @@ footer {
     width: auto;
   }
 
+  /* Details popup window */
+  #projects-popup-container {
+    background: rgba(26, 34, 54, 0.95);
+    backdrop-filter: blur(12px);
+  }
+
+  .projects-popup-buttons-secondary, 
+  .projects-popup-buttons, 
+  .close-icon-container,
+  #projects-popup-container img,
+  #projects-popup-container button,
+  .projects-popup-description,
+  #projects-popup-container ul,
+  #projects-popup-container h3 {
+    background: #fff;
+    margin: 0;
+  }
+
+  .close-icon-container {
+    padding: 5% 5% 0 0;
+  }
+
+  #projects-popup-container h3 {
+    font-size: 40px;
+    line-height: 48px;   
+    padding: 0 0 0 5%;
+  }
+
+  #projects-popup-container ul {
+    padding: 3% 0 3% 5%;
+  }
+
+  #projects-popup-container li {
+    font-size: 18px;
+    margin-right: 2%;
+  }
+
+  .projects-popup-image {
+    padding: 0 5% 0 5%;
+  }
+
+  .projects-popup-description {
+    padding: 5% 22% 5% 22%;
+  }
+
+  .projects-popup-buttons {
+    flex-direction: row;
+    column-gap: 5%;
+    padding: 0 22% 12% 22%;
+  }
+
+  .secondary-button {
+    align-items: flex-start;
+  }
+
+  .projects-popup-buttons-secondary {
+    display: flex;
+    justify-content:space-between;
+    padding: 0 22% 12%22%;
+  }
+
+  .projects-popup-buttons-secondary button {
+    display: flex;
+    column-gap: 5%;
+    align-items: center;
+    border: none;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .projects-popup-buttons-secondary button img {
+    width: 20px;
+  }
+
+  .next-project {
+    justify-content: end;
+  }
+
   /* About section*/
   #about {
     flex-direction: row-reverse;
@@ -926,84 +1014,4 @@ footer {
   .icons-container a img {
     height: 20px;
   }
-  
-/* Details popup window */
-  section.presentation-project (este era como el background de la seccion de proyectos){
-    background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
-    background-repeat: no-repeat;
-    background-position: 100% 0%;
-    margin: 0;
-    padding: 0;
-    background-size: 30%;
-  }
-
-  .projects-image-2 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .projects-image-3 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .projects-image-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 70%;
-  }
-
-  section.boxblue-1 {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: #1a2236;
-    padding: 4%;
-    height: 100%;
-    margin-bottom: 5%;
-  }
-
-  ul.lenguages-1 {
-    padding-top: 3% !important;
-    margin-top: 0 !important;
-  }
-
-  .button-see-this-project-1,
-  .button-see-this-project-2,
-  .button-see-this-project-3,
-  .button-see-this-project-4,
-  .button-see-this-project-5,
-  .button-see-this-project-6 {
-    padding-top: 3% !important;
-    margin-top: 3% !important;
-    transition: all 0.5s ease-out;
-  }
-
-  .image-project11 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .projects-popup-paragraph {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 5%;
-  }
-
-  .projects-popup-button-container {
-    padding-left: 16%;
-  }
-
-  .projects-popup-button {
-    text-align: left !important;
-    padding-left: 2% !important;
-  }
-
-  .projects-popup-container {
-    overflow: scroll;
-    height: 90vh !important;
-  } 
 }

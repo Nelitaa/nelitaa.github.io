@@ -159,17 +159,23 @@ for (let i = 0; i < projects.length; i += 1) {
 
     const projectsPopupImage = document.createElement('img');
     projectsPopupImage.src = project.image;
+    projectsPopupImage.className = 'projects-popup-image';
     projectsPopupContainer.appendChild(projectsPopupImage);
 
     const projectsPopupDescription = document.createElement('p');
     projectsPopupDescription.textContent = project.description;
+    projectsPopupDescription.className = 'projects-popup-description';
     projectsPopupContainer.appendChild(projectsPopupDescription);
+
+    const projectsPopupButtons = document.createElement('div');
+    projectsPopupButtons.className = 'projects-popup-buttons';
+    projectsPopupContainer.appendChild(projectsPopupButtons);
 
     const demoButton = document.createElement('button');
     demoButton.type = 'submit';
     demoButton.textContent = 'See live';
     demoButton.className = 'secondary-button';
-    projectsPopupContainer.appendChild(demoButton);
+    projectsPopupButtons.appendChild(demoButton);
 
     demoButton.addEventListener('click', () => {
       window.open(project.linkDemo, '_blank');
@@ -183,7 +189,7 @@ for (let i = 0; i < projects.length; i += 1) {
     sourceButton.type = 'submit';
     sourceButton.textContent = 'See source';
     sourceButton.className = 'secondary-button';
-    projectsPopupContainer.appendChild(sourceButton);
+    projectsPopupButtons.appendChild(sourceButton);
 
     sourceButton.addEventListener('click', () => {
       window.open(project.linkSource, '_blank');
@@ -192,6 +198,35 @@ for (let i = 0; i < projects.length; i += 1) {
     const iconSourceButton = document.createElement('img');
     iconSourceButton.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
     sourceButton.appendChild(iconSourceButton);
+
+    const projectsPopupButtonsSecondary = document.createElement('div');
+    projectsPopupButtonsSecondary.className = 'projects-popup-buttons-secondary';
+    projectsPopupContainer.appendChild(projectsPopupButtonsSecondary);
+
+    const previousButton = document.createElement('button');
+    previousButton.type = 'submit';
+    projectsPopupButtonsSecondary.appendChild(previousButton);
+
+    const iconPreviousButton = document.createElement('img');
+    iconPreviousButton.src = 'https://drive.google.com/uc?export=download&id=1UrRhyLXSf5juuG4mOj6uKI3qkp7_UdRd';
+    previousButton.appendChild(iconPreviousButton);
+
+    const previousButtonContent = document.createElement('p');
+    previousButtonContent.textContent = 'Previous project';
+    previousButton.appendChild(previousButtonContent);
+
+    const nextButton = document.createElement('button');
+    nextButton.type = 'submit';
+    nextButton.className = 'next-project';
+    projectsPopupButtonsSecondary.appendChild(nextButton);
+
+    const nextButtonContent = document.createElement('p');
+    nextButtonContent.textContent = 'Next project';
+    nextButton.appendChild(nextButtonContent);
+
+    const iconNextButton = document.createElement('img');
+    iconNextButton.src = 'https://drive.google.com/uc?export=download&id=1wJaLqka4uIVTpeRlQsDOyLd6lo6WhFl4';
+    nextButton.appendChild(iconNextButton);
   };
 
   cardButton.addEventListener('click', () => {
