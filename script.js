@@ -106,26 +106,6 @@ for (let i = 0; i < projects.length; i += 1) {
   iconCardButton.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
   cardButton.appendChild(iconCardButton);
 
-  const projectsBackground1 = document.createElement('div');
-  projectsBackground1.className = 'projects-background-1';
-  document.getElementById('projects').appendChild(projectsBackground1);
-
-  const projectsBackground2 = document.createElement('div');
-  projectsBackground2.className = 'projects-background-2';
-  document.getElementById('projects').appendChild(projectsBackground2);
-
-  const projectsBackground3 = document.createElement('div');
-  projectsBackground3.className = 'projects-background-3';
-  document.getElementById('projects').appendChild(projectsBackground3);
-
-  const projectsBackground4 = document.createElement('div');
-  projectsBackground4.className = 'projects-background-4';
-  document.getElementById('projects').appendChild(projectsBackground4);
-
-  const projectsBackground5 = document.createElement('div');
-  projectsBackground5.className = 'projects-background-5';
-  document.getElementById('projects').appendChild(projectsBackground5);
-
   /* Details popup window projects section */
   const createPopupProject = (project) => {
     const projectsPopupContainer = document.createElement('div');
@@ -234,3 +214,23 @@ for (let i = 0; i < projects.length; i += 1) {
     createPopupProject(project);
   });
 }
+
+const projectsBackground1 = document.createElement('div');
+projectsBackground1.className = 'projects-background-1';
+document.getElementById('projects').appendChild(projectsBackground1);
+
+const projectsBackground2 = document.createElement('div');
+projectsBackground2.className = 'projects-background-2';
+document.getElementById('projects').appendChild(projectsBackground2);
+
+const projectsBackground3 = document.createElement('div');
+projectsBackground3.className = 'projects-background-3';
+document.getElementById('projects').appendChild(projectsBackground3);
+
+const projectsBackground4 = document.createElement('div');
+projectsBackground4.className = 'projects-background-4';
+document.getElementById('projects').appendChild(projectsBackground4);
+
+const projectsBackground5 = document.createElement('div');
+projectsBackground5.className = 'projects-background-5';
+document.getElementById('projects').appendChild(projectsBackground5);
