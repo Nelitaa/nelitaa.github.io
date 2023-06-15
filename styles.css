@@ -1002,6 +1002,7 @@ footer {
   .resume-link-desktop img {
     height: 18px;
     margin-left: 50%;
+    transition: transform 0.3s;
   }
 
   .icons-container {
@@ -1013,5 +1014,12 @@ footer {
 
   .icons-container a img {
     height: 20px;
+    transition: transform 0.3s;
+  }
+
+  .resume-link-desktop img:hover,
+  .icons-container a img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(1);
   }
 }
