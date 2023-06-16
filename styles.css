@@ -1,16 +1,17 @@
-html {
-  background-image: url(https://drive.google.com/uc?export=download&id=1kyxBokabJlD_TvPKAiUbLAh7nZuCbC-x);
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: 35vw;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', monospace;
   font-style: normal;
   color: #1a2236;
 }
 
-body {
-  padding: 0;
-  margin: 0;
+html {
+  background-image: url(https://drive.google.com/uc?export=download&id=1kyxBokabJlD_TvPKAiUbLAh7nZuCbC-x);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 111px
 }
 
 ul {
@@ -49,18 +50,23 @@ h2 {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.01em;
-  margin: 4vw 0 4vw 0;
+  margin: 12px 0 12px 0;
 }
 
 .main-button {
   display: flex;
   justify-content: center;
+  align-self: center;
   font-weight: 500;
+  font-size: 16px;
   line-height: 24px;
   color: #fff;
+  border: #1a2236 solid 1px;
   background: #1a2236;
-  padding: 5%;
-  margin: 5% 0 5% 0;
+  padding: 2vh 4vw 2vh 4vw;
+  margin: 2vh 0 2vh 0;
+  max-width: 288px;
+  width: 100%;
   transition: all 0.5s ease-out;
 }
 
@@ -96,7 +102,11 @@ header {
   display: flex;
   justify-content: flex-end;
   height: auto;
-  padding: 4%;
+  padding: 5%;
+}
+
+.hamburger img {
+  width: 20px;
 }
 
 .navigation-menu {
@@ -119,7 +129,7 @@ header {
 
 .close-icon {
   display: none;
-  padding: 4%;
+  padding: 5%;
 }
 
 .close-icon.active {
@@ -156,13 +166,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  padding: 12% 6% 6% 6%;
+  height: 70vh;
+  padding: 40px 5% 5% 24px;
 }
 
 .background-presentation {
   background-image: url(https://drive.google.com/uc?export=download&id=1XupJ_UCzxSKQsUBwjQA3x7wICdzCN6DP);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
   height: 100%;
 }
 
