@@ -165,7 +165,7 @@ header {
 .section-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   height: 70vh;
   padding: 40px 5% 5% 24px;
 }
@@ -174,7 +174,7 @@ header {
   background-image: url(https://drive.google.com/uc?export=download&id=1XupJ_UCzxSKQsUBwjQA3x7wICdzCN6DP);
   background-size: contain;
   background-repeat: repeat-x;
-  height: 100%;
+  height: 50vw;
 }
 
 /* Projects section*/
@@ -523,24 +523,15 @@ footer {
   }
 
   h2 {
-    font-size: 430%;
+    font-size: 6.5vw;
     text-align: center;
     margin: 2vw 0 2vw 0;
   }
 
   .section-content p,
   .contact-form p {
-    font-size: 14px;
     margin: 0;
     padding-bottom: 5%;
-  }
-
-  .main-button {
-    padding: 2%;
-    margin-top: 3%;
-    font-size: 12px;
-    width: 50%;
-    align-self: center;
   }
 
   .resume-link,
@@ -557,7 +548,6 @@ footer {
   #presentation button,
   #about button {
     align-self: flex-start;
-    width: 212px;
   }
 
   /* Header */
@@ -626,23 +616,26 @@ footer {
   #presentation {
     flex-direction: row;
     padding-left: 4%;
-    height: 92vh;
     margin-top: 8vh;
     scroll-margin-top: 8vh;
   }
 
   .background-presentation {
     background-image: url(https://drive.google.com/uc?export=download&id=1Ti61f904kN4cD8MO4KBwn9tDa5WC4SfK);
+    background-repeat: repeat;
     width: 55vw;
+    height: 100%;
   }
 
-  .section-content {
+  #presentation .section-content {
     padding: 0 6% 0 6%;
     width: 45vw;
     background-image: url(https://drive.google.com/uc?export=download&id=1wfZqFoTeEfaeREM-rdbhRzmoSk9S4dT_);
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    background-size: 17%;
+    background-size: 20%;
+    height: 100%;
+    justify-content: center;
   }
 
   /* Projects section */
