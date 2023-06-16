@@ -371,6 +371,14 @@ header {
   width: auto;
   height: 250px;
   padding: 10%;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.languages:hover,
+.frameworks:hover,
+.web:hover {
+  transform: scale(1.025);
 }
 
 .languages {
@@ -897,6 +905,12 @@ footer {
     margin: 0;
     height: auto;
     background-size: 30%;
+  }
+
+  .languages:hover,
+  .frameworks:hover,
+  .web:hover {
+    transform: none;
   }
 
   .background-about {
