@@ -185,8 +185,12 @@ header {
   margin-top: 8vh;
 }
 
+.title-projects-container {
+  padding-bottom: 5%;
+}
+
 #projects h2 {
-  padding-left: 6%;
+  padding-left: 5%;
 }
 
 .card {
@@ -197,7 +201,7 @@ header {
 
 .card-content {
   background-color: #1a2236;
-  padding: 6%;;
+  padding: 5%;;
 }
 
 #projects h3 {
@@ -206,6 +210,7 @@ header {
   font-size: 20px;
   line-height: 24px;
   margin: 0;
+  padding-bottom: 2vh;
 }
 
 #projects ul {
@@ -220,24 +225,18 @@ header {
   font-size: 10px;
   line-height: 8px;
   background-color: #98dede;
-  padding: 1.5vh 2vw 1.5vh 2vw;
-  margin-right: 2%;
+  padding: 1vh 2vh 1vh 2vh;
+  margin-right: 2vh;
   transition: all 0.5s ease-out;
 }
 
-#projects li:hover,
-#projects li:focus {
-  background-color: #fff;
-}
-
 #projects .main-button {
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   width: 190px;
-  padding: 3%;
-  font-size: 16px;
+  padding: 1.3vh 2vw 1.3vh 2vw;
   border: 1px solid #fff;
-  margin-bottom: 0;
+  margin: 2.5vh 0 0 0;
 }
 
 #projects .main-button:hover, 
@@ -251,7 +250,7 @@ header {
 }
 
 #projects .main-button img {
-  margin-left: 10%;
+  margin-left: 7%;
 }
 
 /* Details popup window */
