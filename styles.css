@@ -348,12 +348,12 @@ header {
 }
 
 #about .section-content {
-  padding-top: 8vh;
+  height: auto;
 }
 
 .main-button img {
   filter: brightness(0) invert(1);
-  height: 18px;
+  height: 20px;
   margin-left: 5%;
 }
 
@@ -367,17 +367,13 @@ header {
 .web {
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  color: #fff;
-  font-weight: 800;
-  line-height: 30px;
-  margin: 6%;
+  margin: 5%;
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  background-size: 100px 100px;
+  background-size: 102px 102px;
   width: auto;
-  height: 250px;
-  padding: 10%;
+  height: 289px;
+  padding: 9%;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
@@ -404,19 +400,22 @@ header {
   background-image: url(https://drive.google.com/uc?export=download&id=1hOM0oq0FGkrryYMdWJ0k04cCfzFZxfIC);
 }
 
-h3 {
-  font-weight: 900;
+#about h3 {
+  font-weight: 800;
   line-height: 30px;
-  font-size: 22px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .blocks ul {
-  list-style-type:disc;
+  list-style-type: disc;
+  padding: 17px 0 0 21px;
 }
 
 .blocks li {
-  font-weight: 400;
-  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 27px;
   letter-spacing: -0.0525em;
 }
