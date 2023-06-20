@@ -216,7 +216,6 @@ header {
 #projects ul {
   display: flex;
   flex-direction: row;
-  list-style-type: none;
   padding: 0;
 }
 
@@ -227,11 +226,9 @@ header {
   background-color: #98dede;
   padding: 1vh 2vh 1vh 2vh;
   margin-right: 2vh;
-  transition: all 0.5s ease-out;
 }
 
 #projects .main-button {
-  justify-content: center;
   align-items: center;
   width: 190px;
   padding: 1.3vh 2vw 1.3vh 2vw;
@@ -652,12 +649,11 @@ footer {
     background-repeat: no-repeat;
     background-size: 25%;
     background-position: 100% 0;
+    padding-top: 13vh;
   }
 
   #projects h2 {
-    margin-top: 16vh;
     transform: rotate(-90deg);
-    padding: 0;
   }
 
   #card-1 {
