@@ -436,7 +436,7 @@ header {
   background-repeat: no-repeat;
   background-size: 35vw;
   background-position: 0% 0%;
-  padding: 35% 6% 6% 6%;
+  padding: 35% 5% 5% 5%;
 }
 
 form {
@@ -926,34 +926,36 @@ footer {
 
   /* Contact section */
   #contact {
-    flex-direction: row;
-    height: 92vh;
+    display: grid;
+    grid-template-columns: 31vw 38vw 31vw;
+    grid-template-rows: 92vh;
     margin-top: 8vh;
     scroll-margin-top: 8vh;
   }
 
   .contact-background-left {
     display: flex;
-    width: 31%;
+    grid-area: 1/1/2/2;
     background-image: url(https://drive.google.com/uc?export=download&id=1TizzuS7O_NrHLIALDGjTjaU8lOfWMly6);
     background-repeat: no-repeat;
     background-position: 0% 0%;
-    background-size: 30vh;
+    background-size: 57%;
   }
 
   .contact-background-right {
     display: flex;
-    width: 31%;
+    grid-area: 1/3/2/4;
     background-image: url(https://drive.google.com/uc?export=download&id=1_dW8Mn8gtm1fqw0q0vFzxQsyrNnhWGMR);
     background-repeat: no-repeat;
-    background-size: 35vh;
+    background-size: 80%;
     background-position: 100% 100%;
   }
 
   .contact-form {
-    width: 38%;
-    background-image: none;
-    padding: 10% 0 5% 0;
+    grid-area: 1/2/2/3;
+    background: none;
+    justify-content: center;
+    padding: 0;
   }
 
   form {
@@ -981,7 +983,7 @@ footer {
   }
 
   textarea {
-    height: 75px;
+    height: 140px;
     font-size: 12px;
     margin-top: 0;
   }
