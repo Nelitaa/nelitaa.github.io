@@ -96,6 +96,7 @@ header {
   flex-direction: column;
   justify-content: center;
   height: auto;
+  z-index: 3;
 }
 
 .hamburger {
@@ -373,7 +374,7 @@ header {
   background-size: 102px 102px;
   width: auto;
   height: 289px;
-  padding: 9%;
+  padding: 50px 27px 50px 27px;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
@@ -637,7 +638,7 @@ footer {
   #projects {
     display: grid;
     grid-template-columns: 31vw 12vw 13vw 13vw 31vw;
-    grid-template-rows: 70vh auto 35vh 20vh auto;
+    grid-template-rows: 70vh auto 35vh 20vh 25vh;
     margin-top: 16vh;
     scroll-margin-top: 16vh;
   }
@@ -719,11 +720,10 @@ footer {
   #card-6 {
     grid-area: 5/4/6/6;
     width: 77%;
-    height: 70%;
   }
 
-  #card-5 img,
   #card-6 img,
+  #card-5 img,
   #card-4 img,
   #card-1 img {
     object-fit: cover;
@@ -882,27 +882,32 @@ footer {
   #about {
     flex-direction: row-reverse;
     align-items: center;
-    height: 92vh;
+    height: auto;
+    margin: 8vh 0 8vh 0;
     scroll-margin-top: 8vh;
-    margin: 8vh 5% 0 10%;
+  }
+
+  #about .section-content {
+    width: 40%;
+    padding: 0 5% 0 2.5%;
   }
 
   .blocks {
     display: grid;
-    grid-template-columns: 32vh 32vh ;
-    grid-template-rows: 32vh 32vh ;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(0, 289px));
+    grid-template-rows:  289px 289px;
+    padding: 5% 2.5% 5% 5%;
+    width: 60%;
+    height: 100%;
   }
 
-  .blocks ul {
-    margin-top: 5%;
-  }
-
+  .background-about,
   .languages,
   .frameworks,
   .web {
     margin: 0;
-    height: auto;
-    background-size: 30%;
+    width: 100%;
   }
 
   .languages:hover,
@@ -916,16 +921,7 @@ footer {
     background-image: url(https://drive.google.com/uc?export=download&id=1Gyn_RExJ_M6yD-sBAheQGj8GnzC-4cL5);
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    background-size: 70%;
-  }
-
-  h3 {
-    font-size: 16px;
-    margin: 0;
-  }
-
-  .blocks li {
-    font-size: 15px;
+    background-size: 75%;
   }
 
   /* Contact section */
