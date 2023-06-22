@@ -454,26 +454,25 @@ label {
   display: flex;
   flex-direction: column;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   color: #7d7c84;
   padding-top: 2%;
 }
 
 textarea,
 input {
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid #dfdfe0;
   border-radius: 4px;
   font-weight: 400;
-  height: 70px;
+  height: 52px;
   margin: 2% 0 2% 0;
-  padding: 10% 5% 5% 5%;
+  padding: 3vh 4vw 1.5vh 4vw;
 }
 
 textarea {
-  height: 150px;
-  padding: 5%;
+  height: 112px;
+  padding: 4vw;
 }
 
 /* Footer */
@@ -529,8 +528,7 @@ footer {
     margin: 2vw 0 2vw 0;
   }
 
-  .section-content p,
-  .contact-form p {
+  .section-content p {
     margin: 0;
     padding-bottom: 5%;
   }
@@ -964,33 +962,32 @@ footer {
   }
 
   form {
-    margin-top: 5%;
+    margin: 2vh 0 2vh 0;
   }
 
   .inputs-container {
-    display: flex;
     flex-direction: row;
     column-gap: 5%;
+    margin-bottom: 4%;
   }
 
   label {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 18px;
     width: 100%;
     padding-top: 0;
   }
 
   input {
-    height: 35px;
+    height: 60px;
     padding: 8%;
     font-size: 12px;
-    margin-top: 0;
   }
 
   textarea {
-    height: 140px;
     font-size: 12px;
-    margin-top: 0;
+    height: 140px;
+    padding: 2vh;
   }
 
   /* Footer */
