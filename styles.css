@@ -494,7 +494,7 @@ footer {
   font-weight: 500;
   line-height: 24px;
   color: #92dcdc;
-  margin: 0;
+  font-size: 16px;
 }
 
 .resume-link a {
@@ -512,7 +512,7 @@ footer {
   align-self: center;
   justify-content: space-evenly;
   height: 50%;
-  width: 300px;
+  width: 320px;
   padding: 50px 0 50px 0;
 }
 
@@ -1006,13 +1006,19 @@ footer {
   }
 
   .resume-link-desktop p {
-    font-weight: 400;
-    font-size: 14px;
     color: #92dcdc;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .resume-link-desktop a {
+    align-content: center;
+    height: 100%;
   }
 
   .resume-link-desktop img {
-    height: 18px;
+    height: 24px;
     margin-left: 50%;
     transition: transform 0.3s;
   }
@@ -1020,12 +1026,11 @@ footer {
   .icons-container {
     align-items: center;
     padding: 0;
-    width: 20%;
     margin-right: 10%;
   }
 
   .icons-container a img {
-    height: 20px;
+    height: 24px;
     transition: transform 0.3s;
   }
 
