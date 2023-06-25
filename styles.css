@@ -113,19 +113,28 @@ header {
 .navigation-menu {
   display: none;
   font-weight: 400;
-  font-size: 120%;
+  font-size: 16px;
   line-height: 48px;
   text-align: center;
   height: 100vh;
-  background-image: url(https://drive.google.com/uc?export=download&id=1spkhvqFkkM-3QiISdSiLUhWhA2nQ3Eif);
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: 100vw;
+  width: 100vw;
+  background: #fff;
 }
 
 .navigation-menu.active {
   display: flex;
   flex-direction: column;
+  background-image: url(https://drive.google.com/uc?export=download&id=19Zajh_66j2dXcJ_BIs6p1lF_Mqzj0aQu);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 280px;
+}
+
+.background-navigation {
+  background-image: url(https://drive.google.com/uc?export=download&id=1eM9qE8H_5Y24FDovl31mOkf7E56S1LV5);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 30vh;
 }
 
 .close-icon {
@@ -141,13 +150,17 @@ header {
 .nav-pages-menu {
   display: none;
   margin: 0;
-  padding: 40%;
+  height: 100%;
 }
 
 .nav-pages-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.nav-pages-menu li {
+  padding: 2% 0 2% 0;
 }
 
 .nav-pages-menu li:hover a,
@@ -575,6 +588,7 @@ footer {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+    height: 8vh;
   }
 
   .nav-pages li {
