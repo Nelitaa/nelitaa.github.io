@@ -840,10 +840,15 @@ footer {
     padding: 5% 5% 0 0;
   }
 
+  .close-icon-container img {
+    width: 24px;
+  }
+
   #projects-popup-container h3 {
-    font-size: 40px;
-    line-height: 48px;   
-    padding: 0 0 0 5%;
+    font-size: 60px;
+    line-height: 70px;   
+    padding-left: 5%;
+    padding-bottom: 0;
   }
 
   #projects-popup-container ul {
@@ -851,7 +856,8 @@ footer {
   }
 
   #projects-popup-container li {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 16px;
     margin-right: 2%;
   }
 
@@ -863,20 +869,40 @@ footer {
     padding: 5% 22% 5% 22%;
   }
 
+  #projects-popup-container p {
+    margin: 0;
+  }
+
   .projects-popup-buttons {
     flex-direction: row;
     column-gap: 5%;
-    padding: 0 22% 12% 22%;
+    padding: 0 22% 10% 22%;
   }
 
-  .secondary-button {
+  #projects .secondary-button {
     align-items: flex-start;
+    padding-left: 2.5%;
+    transition: none;
   }
-
+  
+  #projects .secondary-button:hover,
+  #projects .secondary-button:focus {
+    background: #1a2236;
+    color: #fff;
+    border: none;
+    align-items: center;
+    padding-left: 0;
+  }
+  
+  #projects .secondary-button:hover img,
+  #projects .secondary-button:focus img {
+    display: none;
+  }
+  
   .projects-popup-buttons-secondary {
     display: flex;
     justify-content:space-between;
-    padding: 0 22% 12%22%;
+    padding: 0 22% 10% 22%;
   }
 
   .projects-popup-buttons-secondary button {
@@ -893,7 +919,7 @@ footer {
   }
 
   .projects-popup-buttons-secondary button img {
-    width: 20px;
+    width: 22px;
   }
 
   .next-project {
