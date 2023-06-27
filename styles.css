@@ -269,7 +269,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 6%;
+  padding: 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -277,7 +277,6 @@ header {
   width: 100%;
   z-index: 3;
   overflow: auto;
-  box-sizing: border-box;
 }
 
 .close-icon-container {
@@ -292,20 +291,20 @@ header {
   margin: 5% 0 2.5% 0;
 }
 
+#projects-popup-container ul {
+  margin-bottom: 2vh;
+}
+
 #projects-popup-container li {
   background-color: #fff;
   border: 0.5px solid #1a2236;
-  color: #1a2236;
-  font-weight: 300;
-  font-size: 10px;
-  margin-right: 5%;
-  padding: 1.5% 3% 1.5% 3%;
 }
 
 #projects-popup-container p {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  margin: 4vh 0 4vh 0;
 }
 
 .projects-popup-buttons {
@@ -327,9 +326,11 @@ header {
   border: 1px solid #1a2236;
   width: 246px;
   height: 51px;
-  margin: 15px;
-  padding: 3%;
   transition: all 0.5s ease-out;
+}
+
+.secondary-button:nth-child(even) {
+  margin-top: 4vh;
 }
 
 .secondary-button:hover {
