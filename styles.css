@@ -915,11 +915,23 @@ footer {
     line-height: 27px;
     padding: 0;
     width: 100%;
+    transition: transform 0.3s;
+  }
+
+  .projects-popup-buttons-secondary button:hover img,
+  .projects-popup-buttons-secondary button:focus img, 
+  .projects-popup-buttons-secondary button:hover p,
+  .projects-popup-buttons-secondary button:focus p {
+    transform: scale(1.2);
+  }
+
+  .projects-popup-buttons-secondary button p {
     cursor: pointer;
   }
 
   .projects-popup-buttons-secondary button img {
     width: 22px;
+    cursor: pointer;
   }
 
   .next-project {

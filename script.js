@@ -107,6 +107,8 @@ for (let i = 0; i < projects.length; i += 1) {
   cardButton.appendChild(iconCardButton);
 
   /* Details popup window projects section */
+  let currentProjectIndex = parseInt(cardButton.id, 10);
+
   const createPopupProject = (project) => {
     const projectsPopupContainer = document.createElement('div');
     projectsPopupContainer.id = 'projects-popup-container';
@@ -183,30 +185,47 @@ for (let i = 0; i < projects.length; i += 1) {
     projectsPopupButtonsSecondary.className = 'projects-popup-buttons-secondary';
     projectsPopupContainer.appendChild(projectsPopupButtonsSecondary);
 
-    const previousButton = document.createElement('button');
-    previousButton.type = 'submit';
-    projectsPopupButtonsSecondary.appendChild(previousButton);
+    if (currentProjectIndex > 0) {
+      const previousButton = document.createElement('button');
+      previousButton.type = 'submit';
+      previousButton.className = 'previous-project';
+      projectsPopupButtonsSecondary.appendChild(previousButton);
 
-    const iconPreviousButton = document.createElement('img');
-    iconPreviousButton.src = 'https://drive.google.com/uc?export=download&id=1UrRhyLXSf5juuG4mOj6uKI3qkp7_UdRd';
-    previousButton.appendChild(iconPreviousButton);
+      const iconPreviousButton = document.createElement('img');
+      iconPreviousButton.src = 'https://drive.google.com/uc?export=download&id=1UrRhyLXSf5juuG4mOj6uKI3qkp7_UdRd';
+      previousButton.appendChild(iconPreviousButton);
 
-    const previousButtonContent = document.createElement('p');
-    previousButtonContent.textContent = 'Previous project';
-    previousButton.appendChild(previousButtonContent);
+      const previousButtonContent = document.createElement('p');
+      previousButtonContent.textContent = 'Previous project';
+      previousButton.appendChild(previousButtonContent);
 
-    const nextButton = document.createElement('button');
-    nextButton.type = 'submit';
-    nextButton.className = 'next-project';
-    projectsPopupButtonsSecondary.appendChild(nextButton);
+      previousButton.addEventListener('click', () => {
+        currentProjectIndex -= 1;
+        projectsPopupContainer.remove();
+        createPopupProject(projects[currentProjectIndex]);
+      });
+    }
 
-    const nextButtonContent = document.createElement('p');
-    nextButtonContent.textContent = 'Next project';
-    nextButton.appendChild(nextButtonContent);
+    if (currentProjectIndex < projects.length - 1) {
+      const nextButton = document.createElement('button');
+      nextButton.type = 'submit';
+      nextButton.className = 'next-project';
+      projectsPopupButtonsSecondary.appendChild(nextButton);
 
-    const iconNextButton = document.createElement('img');
-    iconNextButton.src = 'https://drive.google.com/uc?export=download&id=1wJaLqka4uIVTpeRlQsDOyLd6lo6WhFl4';
-    nextButton.appendChild(iconNextButton);
+      const nextButtonContent = document.createElement('p');
+      nextButtonContent.textContent = 'Next project';
+      nextButton.appendChild(nextButtonContent);
+
+      const iconNextButton = document.createElement('img');
+      iconNextButton.src = 'https://drive.google.com/uc?export=download&id=1wJaLqka4uIVTpeRlQsDOyLd6lo6WhFl4';
+      nextButton.appendChild(iconNextButton);
+
+      nextButton.addEventListener('click', () => {
+        currentProjectIndex += 1;
+        projectsPopupContainer.remove();
+        createPopupProject(projects[currentProjectIndex]);
+      });
+    }
   };
 
   cardButton.addEventListener('click', () => {
