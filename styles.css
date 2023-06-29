@@ -11,7 +11,7 @@ html {
   background-image: url(https://drive.google.com/uc?export=download&id=1kyxBokabJlD_TvPKAiUbLAh7nZuCbC-x);
   background-repeat: no-repeat;
   background-position: 0% 0%;
-  background-size: 111px
+  background-size: 111px;
 }
 
 ul {
@@ -70,7 +70,7 @@ h2 {
   transition: all 0.5s ease-out;
 }
 
-.main-button:focus, 
+.main-button:focus,
 .main-button:hover {
   background: #fff;
   color: #1a2236;
@@ -168,7 +168,7 @@ header {
   font-size: xx-large;
 }
 
-/* Presentation section*/
+/* Presentation section */
 #presentation {
   display: flex;
   flex-direction: column;
@@ -250,7 +250,7 @@ header {
   margin: 2.5vh 0 0 0;
 }
 
-#projects .main-button:hover, 
+#projects .main-button:hover,
 #projects .main-button:focus {
   color: #1a2236;
   border: 2px solid #fff;
