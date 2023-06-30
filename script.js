@@ -1,497 +1,255 @@
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.navigation-menu');
+const close = document.querySelector('.close-icon');
+const pages = document.querySelectorAll('.nav-pages-menu li');
+const body = document.querySelector('body');
+const form = document.querySelector('form');
+
+/* Navigation Menu */
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('hide');
+  menu.classList.toggle('active');
+  close.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = '';
+  }
+});
+
+close.addEventListener('click', () => {
+  hamburger.classList.remove('hide');
+  menu.classList.remove('active');
+  close.classList.remove('active');
+  body.style.overflow = '';
+});
+
+pages.forEach((i) => i.addEventListener('click', () => {
+  hamburger.classList.remove('hide');
+  menu.classList.remove('active');
+  close.classList.remove('active');
+  body.style.overflow = '';
+}));
+
+/* Reset form */
+form.addEventListener('submit', () => {
+  setTimeout(() => {
+    form.reset();
+  }, 100);
+});
+
+/* Projects section */
 const projects = [
   {
-    name: 'Project 1 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1HXlJfB-0riqWY9-I0zuQHusZCi2KxYa_', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'Book an Appointment', description: 'This full stack app enables you to book appointments with doctors who specialize in your needs. You can reserve an appointment with a doctor of your choice, view and delete your appointments, and add or remove doctors from your list to find the perfect match for your healthcare needs.', image: 'https://drive.google.com/uc?export=download&id=1ezqFesIFpE1D01gOhYnhAz48DyRBIcsw', technologies: ['React', 'Ruby on Rails', 'PostgreSQL'], linkDemo: 'http://162.243.166.190/', linkSource: 'https://github.com/Nelitaa/book-an-appointment',
   },
   {
-    name: 'Project 2 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=13ayEXXW-B43VX-TAXmpqdcKM0ElcgvUX', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'Recipe App', description: 'The Recipe app tracks your recipes, ingredients, and inventory. You can save ingredients, create recipes, and generate a shopping list based on what you have and need. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.', image: 'https://drive.google.com/uc?export=download&id=1G2wQZDLDVKNMEBO0Z_RJtiiLjKmHzFau', technologies: ['Ruby on Rails', 'PostgreSQL'], linkDemo: 'Coming Soon...', linkSource: 'https://github.com/Nelitaa/Recipe-App',
   },
   {
-    name: 'Project 3 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1BGe71kPBmeKQ9YSNCfPwRLgYSCdeIJdo', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'I Love Food', description: 'This is a mobile web application that uses an external API to provide a seamless browsing experience for users exploring a variety of recipes from around the world, curated and organized by country. Users can track the popularity of each recipe with detailed view counts per recipe and by country and globally.', image: 'https://drive.google.com/uc?export=download&id=1K7WkVclQld9LM24YHVfefPttob08--4-', technologies: ['React', 'Redux'], linkDemo: 'https://i-love-food.onrender.com/', linkSource: 'https://github.com/Nelitaa/I-love-food',
   },
   {
-    name: 'Project 4 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1TndTLN0JFv6vbAgfiYqASfGdnZh23x5K', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'The Meal DB', description: 'This repository hosts The Meal DB, a web application that utilizes an external API to provide a comprehensive database of meals, complete with information such as name, image, and description. Users can interact with the meals by liking or commenting on them. Our team collaborated using a kanban board to ensure a successful project delivery.', image: 'https://drive.google.com/uc?export=download&id=1wPJf5u_pj07nC1ukpLDWx_yGl_F2cpeK', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Capstone-Project-JavaScript/dist/', linkSource: 'https://github.com/Nelitaa/The-Meal-DB',
   },
   {
-    name: 'Project 5 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1Fc6Zn6dB3FL5s7n4CAllHlAKAj_7W3Oj', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'Employment and Entrepreneurship Fair 2022', description: 'This repository showcases the responsive design for the Employment and Entrepreneurship Fair 2022 website, following Behance design guidelines. You can easily find all comprehensive information regarding the event, including the date, location, speakers, sponsors, and main programs such as lectures, job matching, roundtables, stands and exhibitions', image: 'https://drive.google.com/uc?export=download&id=1uMcsZWyVbRcpJm7ePgK0-e8G5RpW31BY', technologies: ['HTML5/CSS3', 'JavaScript'], linkDemo: 'https://nelitaa.github.io/Employment-and-Entrepreneurship-Fair-2022/', linkSource: 'https://github.com/Nelitaa/Employment-and-Entrepreneurship-Fair-2022',
   },
   {
-    name: 'Project 6 name goes here', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', image: 'https://drive.google.com/uc?export=download&id=1oYeLFQU5OUAQsQkJtap0sK5FfpjJUvIe', imageSecundary: 'https://drive.google.com/uc?export=download&id=1JGaG5b6Vxu4GYrchLj-usQ3t6iPXbrpE', technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'], linkDemo: 'link', linkSource: 'link',
+    name: 'Math Magicians', description: 'Math magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote.', image: 'https://drive.google.com/uc?export=download&id=1Y3qesIAGy5otMVEQq4RlSJFlZdr4HKy0', technologies: ['React'], linkDemo: 'https://math-magicians-zjk7.onrender.com/', linkSource: 'https://github.com/Nelitaa/Math-magicians',
   },
 ];
 
-const sectionh2 = document.createElement('section');
-sectionh2.className = 'presentation-project';
-document.getElementById('portfolio').appendChild(sectionh2);
+const titleProjectsContainer = document.createElement('div');
+titleProjectsContainer.className = 'title-projects-container';
+document.getElementById('projects').appendChild(titleProjectsContainer);
 
-const h2Projects = document.createElement('h2');
-h2Projects.textContent = 'Projects';
-h2Projects.className = 'rotate-projects';
-sectionh2.appendChild(h2Projects);
-
-for (let i = 0; i < projects.length; i += 1) {
-  const sectionBox = document.createElement('section');
-  if (i === 0) {
-    sectionBox.className = 'projects-section';
-  }
-  if (i === 1) {
-    sectionBox.className = 'projects-section-2';
-  }
-  if (i === 2) {
-    sectionBox.className = 'projects-section-3';
-  }
-  if (i === 3) {
-    sectionBox.className = 'projects-section-4';
-  }
-  if (i === 4) {
-    sectionBox.className = 'projects-section-5';
-  }
-  if (i === 5) {
-    sectionBox.className = 'projects-section-6';
-  }
-  document.getElementById('portfolio').appendChild(sectionBox);
-
-  const divProjectImage = document.createElement('div');
-  if (i === 0) {
-    divProjectImage.className = 'projects-image';
-  }
-  if (i === 1) {
-    divProjectImage.className = 'projects-image-2';
-  }
-  if (i === 2) {
-    divProjectImage.className = 'projects-image-3';
-  }
-  if (i === 3) {
-    divProjectImage.className = 'projects-image-4';
-  }
-  if (i === 4) {
-    divProjectImage.className = 'projects-image-5';
-  }
-  if (i === 5) {
-    divProjectImage.className = 'projects-image-6';
-  }
-  sectionBox.appendChild(divProjectImage);
-
-  if (i === 0) {
-    const imgProject1 = document.createElement('img');
-    imgProject1.className = 'image-project11';
-    imgProject1.src = 'https://drive.google.com/uc?export=download&id=1WBbS3KNDo33AUiytKyxuGSv0hj8nQfu-';
-    divProjectImage.appendChild(imgProject1);
-  }
-
-  const imgProject = document.createElement('img');
-  if (i === 0) {
-    imgProject.className = 'image-project1';
-  }
-  imgProject.src = projects[i].image;
-  divProjectImage.appendChild(imgProject);
-
-  const sectionBoxBlue = document.createElement('section');
-  if (i === 0) {
-    sectionBoxBlue.className = 'boxblue-1';
-  }
-  if (i === 1) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 2) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 3) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 4) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  if (i === 5) {
-    sectionBoxBlue.className = 'boxblue';
-  }
-  sectionBox.appendChild(sectionBoxBlue);
-
-  const h3Projects = document.createElement('h3');
-  h3Projects.textContent = projects[i].name;
-  sectionBoxBlue.appendChild(h3Projects);
-
-  const ulProjects = document.createElement('ul');
-  if (i === 0) {
-    ulProjects.className = 'lenguages-1';
-  }
-  if (i === 1) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 2) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 3) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 4) {
-    ulProjects.className = 'lenguages';
-  }
-  if (i === 5) {
-    ulProjects.className = 'lenguages';
-  }
-  sectionBoxBlue.appendChild(ulProjects);
-
-  const liProjects1 = document.createElement('li');
-  liProjects1.textContent = projects[i].technologies['0'];
-  liProjects1.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects1);
-
-  const liProjects2 = document.createElement('li');
-  liProjects2.textContent = projects[i].technologies['1'];
-  liProjects2.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects2);
-
-  const liProjects3 = document.createElement('li');
-  liProjects3.textContent = projects[i].technologies['2'];
-  liProjects3.className = 'boxlenguages';
-  ulProjects.appendChild(liProjects3);
-
-  const buttonSeeThisProject = document.createElement('button');
-  buttonSeeThisProject.type = 'submit';
-  buttonSeeThisProject.textContent = 'See this project';
-  if (i === 0) {
-    buttonSeeThisProject.className = 'button-see-this-project-1';
-  }
-  if (i === 1) {
-    buttonSeeThisProject.className = 'button-see-this-project-2';
-  }
-  if (i === 2) {
-    buttonSeeThisProject.className = 'button-see-this-project-3';
-  }
-  if (i === 3) {
-    buttonSeeThisProject.className = 'button-see-this-project-4';
-  }
-  if (i === 4) {
-    buttonSeeThisProject.className = 'button-see-this-project-5';
-  }
-  if (i === 5) {
-    buttonSeeThisProject.className = 'button-see-this-project-6';
-  }
-  sectionBoxBlue.appendChild(buttonSeeThisProject);
-
-  const iconButtonSeeThisProject = document.createElement('img');
-  iconButtonSeeThisProject.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
-  iconButtonSeeThisProject.className = 'projects-button-icon';
-  buttonSeeThisProject.appendChild(iconButtonSeeThisProject);
-
-  const divBackground1 = document.createElement('div');
-  divBackground1.className = 'background-1';
-  document.getElementById('portfolio').appendChild(divBackground1);
-
-  const divBackground2 = document.createElement('div');
-  divBackground2.className = 'background-2';
-  document.getElementById('portfolio').appendChild(divBackground2);
-
-  const divBackground3 = document.createElement('div');
-  divBackground3.className = 'background-3';
-  document.getElementById('portfolio').appendChild(divBackground3);
-
-  const divBackground4 = document.createElement('div');
-  divBackground4.className = 'background-4';
-  document.getElementById('portfolio').appendChild(divBackground4);
-
-  const divBackground5 = document.createElement('div');
-  divBackground5.className = 'background-5';
-  document.getElementById('portfolio').appendChild(divBackground5);
-}
-
-const menu = document.querySelector('.nav-icon');
-const popUp = document.querySelector('.navigation');
-const xButton = document.querySelector('.xbutt');
-const scrollb = document.querySelector('body');
-const links = document.querySelector('.nav-pages-pop');
-const navX = document.querySelector('.nav-icon-pop');
-
-menu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  popUp.classList.toggle('active');
-  scrollb.classList.toggle('active');
-  xButton.classList.toggle('active');
-  links.classList.toggle('active');
-  navX.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-pages-pop').forEach((i) => i.addEventListener('click', () => {
-  menu.classList.remove('active');
-  popUp.classList.remove('active');
-  scrollb.classList.remove('active');
-  xButton.classList.remove('active');
-  links.classList.remove('active');
-  navX.classList.toggle('active');
-}));
-
-document.querySelector('.xbutt').addEventListener('click', () => {
-  xButton.classList.remove('active');
-  menu.classList.remove('active');
-  popUp.classList.remove('active');
-  scrollb.classList.remove('active');
-  xButton.classList.remove('active');
-  links.classList.remove('active');
-  navX.classList.toggle('active');
-});
-
-function createProject(project) {
-  const divXButton = document.createElement('div');
-  divXButton.id = 'projects-popup-divXButton';
-  divXButton.className = 'projects-popup-divXButton-container';
-  document.getElementById('projects-popup').appendChild(divXButton);
-
-  const xButton = document.createElement('img');
-  xButton.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
-  xButton.className = 'projects-popup-divXButton';
-  divXButton.appendChild(xButton);
-
-  const h2 = document.createElement('h2');
-  h2.textContent = project.name;
-  h2.className = 'projects-popup-title';
-  document.getElementById('projects-popup').appendChild(h2);
-
-  const ul = document.createElement('ul');
-  ul.id = 'lenguagesPopup';
-  document.getElementById('projects-popup').appendChild(ul);
-
-  const li = document.createElement('li');
-  li.textContent = project.technologies['0'];
-  li.className = 'boxlenguages-pop';
-  ul.appendChild(li);
-
-  const lisecond = document.createElement('li');
-  lisecond.textContent = project.technologies['1'];
-  lisecond.className = 'boxlenguages-pop';
-  ul.appendChild(lisecond);
-
-  const listhird = document.createElement('li');
-  listhird.textContent = project.technologies['2'];
-  listhird.className = 'boxlenguages-pop';
-  ul.appendChild(listhird);
-
-  const img1 = document.createElement('img');
-  img1.src = project.image;
-  img1.className = 'projects-popup-img1';
-  document.getElementById('projects-popup').appendChild(img1);
-
-  const divImg = document.createElement('div');
-  divImg.id = 'projects-popup-img';
-  divImg.className = 'projects-popup-img-container';
-  document.getElementById('projects-popup').appendChild(divImg);
-
-  const img2 = document.createElement('img');
-  img2.src = project.imageSecundary;
-  img2.className = 'projects-popup-img';
-  divImg.appendChild(img2);
-
-  const img3 = document.createElement('img');
-  img3.src = project.imageSecundary;
-  img3.className = 'projects-popup-img';
-  divImg.appendChild(img3);
-
-  const img4 = document.createElement('img');
-  img4.src = project.imageSecundary;
-  img4.className = 'projects-popup-img';
-  divImg.appendChild(img4);
-
-  const img5 = document.createElement('img');
-  img5.src = project.imageSecundary;
-  img5.className = 'projects-popup-img';
-  divImg.appendChild(img5);
-
-  const p = document.createElement('p');
-  p.textContent = project.description;
-  p.className = 'projects-popup-paragraph';
-  document.getElementById('projects-popup').appendChild(p);
-
-  const divButton = document.createElement('div');
-  divButton.id = 'projects-popup-button';
-  divButton.className = 'projects-popup-button-container';
-  document.getElementById('projects-popup').appendChild(divButton);
-
-  const buttonDemo = document.createElement('button');
-  buttonDemo.type = 'submit';
-  buttonDemo.textContent = 'See live';
-  buttonDemo.className = 'projects-popup-button';
-  divButton.appendChild(buttonDemo);
-
-  const iconButtonDemo = document.createElement('img');
-  iconButtonDemo.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
-  iconButtonDemo.className = 'projects-popup-button-icon';
-  buttonDemo.appendChild(iconButtonDemo);
-
-  const buttonSource = document.createElement('button');
-  buttonSource.type = 'submit';
-  buttonSource.textContent = 'See source';
-  buttonSource.className = 'projects-popup-button';
-  divButton.appendChild(buttonSource);
-
-  const iconButtonSource = document.createElement('img');
-  iconButtonSource.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
-  iconButtonSource.className = 'projects-popup-button-icon';
-  buttonSource.appendChild(iconButtonSource);
-}
+const titleProjects = document.createElement('h2');
+titleProjects.textContent = 'Projects';
+titleProjectsContainer.appendChild(titleProjects);
 
 for (let i = 0; i < projects.length; i += 1) {
-  if (i === 0) {
-    const open = document.querySelector('.button-see-this-project-1');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
-    });
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.id = `card-${i + 1}`;
+  document.getElementById('projects').appendChild(card);
+
+  const cardImage = document.createElement('img');
+  cardImage.src = projects[i].image;
+  card.appendChild(cardImage);
+
+  const cardContent = document.createElement('div');
+  cardContent.className = 'card-content';
+  card.appendChild(cardContent);
+
+  const cardTitle = document.createElement('h3');
+  cardTitle.textContent = projects[i].name;
+  cardContent.appendChild(cardTitle);
+
+  const cardTechnologies = document.createElement('ul');
+  cardContent.appendChild(cardTechnologies);
+
+  for (let j = 0; j < projects[i].technologies.length; j += 1) {
+    const cardTechnology = document.createElement('li');
+    cardTechnology.textContent = projects[i].technologies[j];
+    cardTechnologies.appendChild(cardTechnology);
   }
-  if (i === 1) {
-    const open = document.querySelector('.button-see-this-project-2');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
+
+  const cardButton = document.createElement('button');
+  cardButton.type = 'submit';
+  cardButton.textContent = 'See this project';
+  cardButton.className = 'main-button';
+  cardButton.id = i;
+  cardContent.appendChild(cardButton);
+
+  const iconCardButton = document.createElement('img');
+  iconCardButton.src = 'https://drive.google.com/uc?export=download&id=1TWy2gNJuqn464l5ggxpIV6ysuhjGYj3c';
+  cardButton.appendChild(iconCardButton);
+
+  /* Details popup window projects section */
+  let currentProjectIndex = parseInt(cardButton.id, 10);
+
+  const createPopupProject = (project) => {
+    const projectsPopupContainer = document.createElement('div');
+    projectsPopupContainer.id = 'projects-popup-container';
+    document.getElementById('projects').appendChild(projectsPopupContainer);
+
+    const closeIconContainer = document.createElement('div');
+    closeIconContainer.className = 'close-icon-container';
+    projectsPopupContainer.appendChild(closeIconContainer);
+
+    const closeIcon = document.createElement('img');
+    closeIcon.src = 'https://drive.google.com/uc?export=download&id=1qkSrHjcZCWXAqs9L_FN8lRCUITxy-cYX';
+    closeIconContainer.appendChild(closeIcon);
+
+    closeIcon.addEventListener('click', () => {
+      projectsPopupContainer.remove();
     });
-  }
-  if (i === 2) {
-    const open = document.querySelector('.button-see-this-project-3');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
+
+    const projectPopupTitle = document.createElement('h3');
+    projectPopupTitle.textContent = project.name;
+    projectsPopupContainer.appendChild(projectPopupTitle);
+
+    const projectPopupTechnologies = document.createElement('ul');
+    projectsPopupContainer.appendChild(projectPopupTechnologies);
+
+    for (let j = 0; j < project.technologies.length; j += 1) {
+      const projectPopupTechnology = document.createElement('li');
+      projectPopupTechnology.textContent = project.technologies[j];
+      projectPopupTechnologies.appendChild(projectPopupTechnology);
+    }
+
+    const projectsPopupImage = document.createElement('img');
+    projectsPopupImage.src = project.image;
+    projectsPopupImage.className = 'projects-popup-image';
+    projectsPopupContainer.appendChild(projectsPopupImage);
+
+    const projectsPopupDescription = document.createElement('p');
+    projectsPopupDescription.textContent = project.description;
+    projectsPopupDescription.className = 'projects-popup-description';
+    projectsPopupContainer.appendChild(projectsPopupDescription);
+
+    const projectsPopupButtons = document.createElement('div');
+    projectsPopupButtons.className = 'projects-popup-buttons';
+    projectsPopupContainer.appendChild(projectsPopupButtons);
+
+    const demoButton = document.createElement('button');
+    demoButton.type = 'submit';
+    demoButton.textContent = 'See live';
+    demoButton.className = 'secondary-button';
+    projectsPopupButtons.appendChild(demoButton);
+
+    demoButton.addEventListener('click', () => {
+      window.open(project.linkDemo, '_blank');
     });
-  }
-  if (i === 3) {
-    const open = document.querySelector('.button-see-this-project-4');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
-      });
+
+    const iconDemoButton = document.createElement('img');
+    iconDemoButton.src = 'https://drive.google.com/uc?export=download&id=17kH5_IbbTsXI9puTDtHuZK6zt4XtZ5-G';
+    demoButton.appendChild(iconDemoButton);
+
+    const sourceButton = document.createElement('button');
+    sourceButton.type = 'submit';
+    sourceButton.textContent = 'See source';
+    sourceButton.className = 'secondary-button';
+    projectsPopupButtons.appendChild(sourceButton);
+
+    sourceButton.addEventListener('click', () => {
+      window.open(project.linkSource, '_blank');
     });
-  }
-  if (i === 4) {
-    const open = document.querySelector('.button-see-this-project-5');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
+
+    const iconSourceButton = document.createElement('img');
+    iconSourceButton.src = 'https://drive.google.com/uc?export=download&id=1XM8ibRfA09uVLwfaQCW6aCRMiG-BP-g3';
+    sourceButton.appendChild(iconSourceButton);
+
+    const projectsPopupButtonsSecondary = document.createElement('div');
+    projectsPopupButtonsSecondary.className = 'projects-popup-buttons-secondary';
+    projectsPopupContainer.appendChild(projectsPopupButtonsSecondary);
+
+    if (currentProjectIndex > 0) {
+      const previousButton = document.createElement('button');
+      previousButton.type = 'submit';
+      previousButton.className = 'previous-project';
+      projectsPopupButtonsSecondary.appendChild(previousButton);
+
+      const iconPreviousButton = document.createElement('img');
+      iconPreviousButton.src = 'https://drive.google.com/uc?export=download&id=1UrRhyLXSf5juuG4mOj6uKI3qkp7_UdRd';
+      previousButton.appendChild(iconPreviousButton);
+
+      const previousButtonContent = document.createElement('p');
+      previousButtonContent.textContent = 'Previous project';
+      previousButton.appendChild(previousButtonContent);
+
+      previousButton.addEventListener('click', () => {
+        currentProjectIndex -= 1;
+        projectsPopupContainer.remove();
+        createPopupProject(projects[currentProjectIndex]);
       });
-    });
-  }
-  if (i === 5) {
-    const open = document.querySelector('.button-see-this-project-6');
-    open.addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.id = 'projects-popup';
-      div.className = 'projects-popup-container';
-      document.body.append(div);
-      document.body.classList.add('stop-scroll');
-      createProject(projects[i]);
-      const close = document.querySelector('.projects-popup-divXButton');
-      close.addEventListener('click', () => {
-        document.body.classList.remove('stop-scroll');
-        document.body.removeChild(div);
+    }
+
+    if (currentProjectIndex < projects.length - 1) {
+      const nextButton = document.createElement('button');
+      nextButton.type = 'submit';
+      nextButton.className = 'next-project';
+      projectsPopupButtonsSecondary.appendChild(nextButton);
+
+      const nextButtonContent = document.createElement('p');
+      nextButtonContent.textContent = 'Next project';
+      nextButton.appendChild(nextButtonContent);
+
+      const iconNextButton = document.createElement('img');
+      iconNextButton.src = 'https://drive.google.com/uc?export=download&id=1wJaLqka4uIVTpeRlQsDOyLd6lo6WhFl4';
+      nextButton.appendChild(iconNextButton);
+
+      nextButton.addEventListener('click', () => {
+        currentProjectIndex += 1;
+        projectsPopupContainer.remove();
+        createPopupProject(projects[currentProjectIndex]);
       });
-    });
-  }
+    }
+  };
+
+  cardButton.addEventListener('click', () => {
+    const project = projects[cardButton.id];
+    createPopupProject(project);
+  });
 }
 
-function showMsg(input, messages, type) {
-  const message = document.getElementById('errorm');
-  message.innerText = messages;
-  input.className = type ? 'success' : 'error';
-  return type;
-}
+const projectsBackground1 = document.createElement('div');
+projectsBackground1.className = 'projects-background-1';
+document.getElementById('projects').appendChild(projectsBackground1);
 
-function showErr(input, messages) {
-  return showMsg(input, messages, false);
-}
+const projectsBackground2 = document.createElement('div');
+projectsBackground2.className = 'projects-background-2';
+document.getElementById('projects').appendChild(projectsBackground2);
 
-function showSucss(input) {
-  return showMsg(input, '', true);
-}
+const projectsBackground3 = document.createElement('div');
+projectsBackground3.className = 'projects-background-3';
+document.getElementById('projects').appendChild(projectsBackground3);
 
-function whitValue(input, messages) {
-  if (input.value.trim() === '') {
-    return showErr(input, messages);
-  }
-  return showSucss(input);
-}
+const projectsBackground4 = document.createElement('div');
+projectsBackground4.className = 'projects-background-4';
+document.getElementById('projects').appendChild(projectsBackground4);
 
-function validate(input, requiredMessage, invalidMessage) {
-  if (!whitValue(input, requiredMessage)) {
-    return false;
-  }
-  const email = input.value.trim();
-  if (!/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/.test(email)) {
-    return showErr(input, invalidMessage);
-  }
-  return true;
-}
-
-const form = document.querySelector('#form-contact');
-const RequiredEmail = 'Please enter your email. Form not submitted';
-const InvalidEmail = 'Please enter a correct email address format. The email has to be in lower case. Form not submitted';
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const validEmail = validate(form.elements.email, RequiredEmail, InvalidEmail);
-  if (validEmail) {
-    alert('Form submitted');
-  }
-});
-
-const nameInput = document.querySelector('#name');
-nameInput.value = JSON.parse(localStorage.getItem('form'))?.name || '';
-nameInput.addEventListener('input', (name) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.name = name.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});
-
-const mailInput = document.querySelector('#email');
-mailInput.value = JSON.parse(localStorage.getItem('form'))?.email || '';
-mailInput.addEventListener('input', (email) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.email = email.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});
-
-const textAreaInput = document.querySelector('#message');
-textAreaInput.value = JSON.parse(localStorage.getItem('form'))?.message || '';
-textAreaInput.addEventListener('input', (message) => {
-  const objForm = JSON.parse(localStorage.getItem('form')) || { name: '', email: '', message: '' };
-  objForm.message = message.target.value;
-  localStorage.setItem('form', JSON.stringify(objForm));
-});
+const projectsBackground5 = document.createElement('div');
+projectsBackground5.className = 'projects-background-5';
+document.getElementById('projects').appendChild(projectsBackground5);
