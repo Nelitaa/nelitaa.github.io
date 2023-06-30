@@ -70,6 +70,15 @@ h2 {
   transition: all 0.5s ease-out;
 }
 
+.main-button,
+.card img,
+.secondary-button,
+.close-icon,
+.hamburger,
+.close-icon-container img {
+  cursor: pointer;
+}
+
 .main-button:focus,
 .main-button:hover {
   background: #fff;
@@ -79,15 +88,6 @@ h2 {
 
 .main-button:focus {
   border: 2px solid #1a2236;
-}
-
-.main-button,
-.card img,
-.secondary-button,
-.close-icon,
-.hamburger,
-.close-icon-container img {
-  cursor: pointer;
 }
 
 /* Header and navigation menu */
@@ -148,15 +148,11 @@ header {
 }
 
 .nav-pages-menu {
-  display: none;
-  margin: 0;
-  height: 100%;
-}
-
-.nav-pages-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 .nav-pages-menu li {
@@ -191,7 +187,7 @@ header {
   height: 50vw;
 }
 
-/* Projects section*/
+/* Projects section */
 #projects {
   display: flex;
   flex-direction: column;
@@ -215,7 +211,7 @@ header {
 
 .card-content {
   background-color: #1a2236;
-  padding: 5%;;
+  padding: 5%;
 }
 
 #projects h3 {
@@ -359,7 +355,7 @@ header {
   filter: brightness(0) invert(1);
 }
 
-/* About section*/
+/* About section */
 #about {
   display: flex;
   flex-direction: column;
@@ -376,7 +372,7 @@ header {
   margin-left: 5%;
 }
 
-.main-button:focus img, 
+.main-button:focus img,
 .main-button:hover img {
   filter: brightness(0);
 }
@@ -439,7 +435,7 @@ header {
   letter-spacing: -0.0525em;
 }
 
-/* Contact section*/
+/* Contact section */
 #contact {
   display: flex;
   flex-direction: column;
@@ -535,7 +531,7 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-  html, 
+  html,
   #about .section-content {
     background: none;
   }
@@ -557,7 +553,7 @@ footer {
     display: none;
   }
 
-  #presentation h2, 
+  #presentation h2,
   #about h2 {
     text-align: left;
   }
@@ -695,7 +691,7 @@ footer {
     background-size: contain;
   }
 
-  #card-3  {
+  #card-3 {
     grid-area: 2/5/3/6;
   }
 
@@ -760,14 +756,14 @@ footer {
   .card {
     position: relative;
   }
-  
+
   .card img {
     position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
   }
-  
+
   .card-content {
     display: none;
     position: absolute;
@@ -777,7 +773,7 @@ footer {
     animation-duration: 0.5s;
     box-sizing: border-box;
   }
-  
+
   .card:hover .card-content {
     display: block;
   }
@@ -786,24 +782,26 @@ footer {
   .card:nth-child(even) .card-content {
     animation-name: slideInRight;
   }
-  
+
   .card:nth-child(odd) .card-content {
     animation-name: slideInLeft;
   }
-  
+
   @keyframes slideInRight {
     from {
       right: -100%;
     }
+
     to {
       right: 0;
     }
   }
-  
+
   @keyframes slideInLeft {
     from {
       left: -100%;
     }
+
     to {
       left: 0;
     }
@@ -824,8 +822,8 @@ footer {
     backdrop-filter: blur(12px);
   }
 
-  .projects-popup-buttons-secondary, 
-  .projects-popup-buttons, 
+  .projects-popup-buttons-secondary,
+  .projects-popup-buttons,
   .close-icon-container,
   #projects-popup-container img,
   #projects-popup-container button,
@@ -846,7 +844,7 @@ footer {
 
   #projects-popup-container h3 {
     font-size: 60px;
-    line-height: 70px;   
+    line-height: 70px;
     padding-left: 5%;
     padding-bottom: 0;
   }
@@ -884,7 +882,7 @@ footer {
     padding-left: 2.5%;
     transition: none;
   }
-  
+
   #projects .secondary-button:hover,
   #projects .secondary-button:focus {
     background: #1a2236;
@@ -893,15 +891,15 @@ footer {
     align-items: center;
     padding-left: 0;
   }
-  
+
   #projects .secondary-button:hover img,
   #projects .secondary-button:focus img {
     display: none;
   }
-  
+
   .projects-popup-buttons-secondary {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 0 22% 10% 22%;
   }
 
@@ -919,7 +917,7 @@ footer {
   }
 
   .projects-popup-buttons-secondary button:hover img,
-  .projects-popup-buttons-secondary button:focus img, 
+  .projects-popup-buttons-secondary button:focus img,
   .projects-popup-buttons-secondary button:hover p,
   .projects-popup-buttons-secondary button:focus p {
     transform: scale(1.2);
@@ -938,7 +936,7 @@ footer {
     justify-content: end;
   }
 
-  /* About section*/
+  /* About section */
   #about {
     flex-direction: row-reverse;
     align-items: center;
@@ -956,7 +954,7 @@ footer {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(0, 289px));
-    grid-template-rows:  289px 289px;
+    grid-template-rows: 289px 289px;
     padding: 5% 2.5% 5% 5%;
     width: 60%;
     height: 100%;
