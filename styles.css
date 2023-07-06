@@ -379,7 +379,7 @@ header {
 
 .languages,
 .frameworks,
-.web {
+.skills {
   display: flex;
   flex-direction: column;
   margin: 5%;
@@ -388,14 +388,14 @@ header {
   background-size: 102px 102px;
   width: auto;
   height: 289px;
-  padding: 50px 27px 50px 27px;
+  padding: 27px;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }
 
 .languages:hover,
 .frameworks:hover,
-.web:hover {
+.skills:hover {
   transform: scale(1.025);
 }
 
@@ -410,7 +410,7 @@ header {
   background-image: url(https://drive.google.com/uc?export=download&id=1Ln6EH7S_ZZgSLulIVCqUPfs0fJN8kaLx);
 }
 
-.web {
+.skills {
   background-color: #febf52;
   background-image: url(https://drive.google.com/uc?export=download&id=1hOM0oq0FGkrryYMdWJ0k04cCfzFZxfIC);
 }
@@ -963,14 +963,14 @@ footer {
   .background-about,
   .languages,
   .frameworks,
-  .web {
+  .skills {
     margin: 0;
     width: 100%;
   }
 
   .languages:hover,
   .frameworks:hover,
-  .web:hover {
+  .skills:hover {
     transform: none;
   }
 
